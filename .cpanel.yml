@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    # Use cPanel's Node (adjust path if your server uses a different version)
+    - export PATH="/opt/cpanel/ea-nodejs18/bin:$PATH"
+    - npm ci
+    # Build for root hosting (base "/")
+    - npm run build:site
+    # Deploy built files to the public_html folder for aurora-lumen.com
+    - /bin/rsync -av --delete dist/default/ /home2/ycjjezvte/public_html/aurora-lumen-new/
