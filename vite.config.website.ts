@@ -19,7 +19,8 @@ export default defineConfig(({ command, mode }) => {
   return {
     root: path.resolve(__dirname),
     publicDir: "public",
-    base: "/website/",
+    // For GitHub Pages under aminedev24.github.io/aurora-lumen/website/
+    base: "/",
     plugins: [react()],
     resolve: {
       alias: {
