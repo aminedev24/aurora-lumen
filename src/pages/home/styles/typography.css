@@ -1,0 +1,250 @@
+/* ==============================================================================
+ * File: /frontend/src/pages/home/styles/typography.css
+ * Description: Text and heading styles for landing pages
+ * ============================================================================== */
+
+/* Base typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Gradient text (Aurora colors) */
+.text-gradient {
+  background: linear-gradient(90deg, var(--aurora-green), var(--aurora-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-reverse {
+  background: linear-gradient(90deg, var(--aurora-blue), var(--aurora-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Muted text */
+.text-muted {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+/* Bold text */
+.text-bold {
+  font-weight: 700;
+}
+
+/* Center aligned */
+.text-center {
+  text-align: center;
+}
+
+/* Lead paragraph */
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Small text */
+.small-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Display heading (extra large) */
+.display-1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+/* Subheading */
+.subheading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--aurora-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Highlight text with background */
+.text-highlight {
+  background: rgba(30, 170, 249, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+body.dark .text-highlight {
+  background: rgba(30, 170, 249, 0.25);
+}
+
+/* Link styles */
+a {
+  color: var(--aurora-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--aurora-green);
+  text-decoration: underline;
+}
+
+/* Code and pre */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(30, 170, 249, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+}
+
+body.dark pre {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Blockquote */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--aurora-blue);
+  background: rgba(30, 170, 249, 0.05);
+  font-style: italic;
+  color: var(--text);
+}
+
+body.dark blockquote {
+  background: rgba(30, 170, 249, 0.1);
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Remove list styling */
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Inline list */
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Strong emphasis */
+strong, b {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Emphasis */
+em, i {
+  font-style: italic;
+}
+
+/* Text utilities */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Truncate text */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .lead {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    line-height: 1.25;
+  }
+  
+  .display-1 {
+    line-height: 1.15;
+  }
+}

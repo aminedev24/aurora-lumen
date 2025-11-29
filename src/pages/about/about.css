@@ -1,0 +1,164 @@
+/* ==============================================================================
+ * frontend/src/pages/about.css
+ * Aurora Lumen — About Page Styles
+ * Luminous gradient layout with glass image frames and aurora separators
+ * ============================================================================== */
+
+/* ---------------- HERO ---------------- */
+.about-hero {
+  text-align: center;
+  padding: clamp(4rem, 8vw, 6rem) 1rem;
+  background: radial-gradient(circle at 60% 40%, rgba(11,139,43,0.18), transparent 70%),
+              radial-gradient(circle at 30% 80%, rgba(30,170,249,0.18), transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+}
+body.dark .about-hero {
+  background: radial-gradient(circle at 60% 40%, rgba(11,139,43,0.22), transparent 70%),
+              radial-gradient(circle at 30% 80%, rgba(30,170,249,0.25), transparent 60%),
+              linear-gradient(180deg, #0e141a 0%, #121a24 100%);
+}
+.about-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #0B8B2B, #1EAAF9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-hero p {
+  max-width: 640px;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* ---------------- SECTION LAYOUT ---------------- */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+  box-sizing: border-box;
+}
+.about-section.full {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.about-section.alt {
+  grid-template-columns: 1fr 1fr;
+}
+.about-section.alt .about-text {
+  order: 1;
+}
+.about-section.alt .about-image-frame {
+  order: 2;
+}
+
+/* ---------------- IMAGE FRAMES ---------------- */
+.about-image-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(30,170,249,0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  max-width: 540px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.about-image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.about-image-fallback {
+  width: 100%;
+  min-height: 240px;
+  text-align: center;
+  font-weight: 600;
+  padding: 3rem 1rem;
+  color: #555;
+}
+
+/* ---------------- TEXT BLOCKS ---------------- */
+.about-text h2 {
+  font-weight: 800;
+  background: linear-gradient(90deg, #0B8B2B, #1EAAF9);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.6rem;
+}
+.about-text p {
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 1.02rem;
+  margin-bottom: 0.5rem;
+}
+.about-sub {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* ---------------- SEPARATORS ---------------- */
+.about-separator,
+.about-mobile-separator {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0B8B2B, #1EAAF9);
+  box-shadow: 0 0 6px rgba(30,170,249,0.22);
+  margin: 0.75rem 0;
+}
+
+/* ---------------- QUOTE ---------------- */
+.about-quote {
+  text-align: center;
+  padding: clamp(3rem, 7vw, 5rem) 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0F172A;
+  background: linear-gradient(180deg, #F8FBFD 0%, #E9F9FF 100%);
+}
+body.dark .about-quote {
+  background: linear-gradient(180deg, #0D1116 0%, #18222F 100%);
+  color: #E5E7EB;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .about-section,
+  .about-section.alt {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image-frame {
+    margin-top: 1.25rem;
+  }
+
+  /* Aurora separators between stacked images on mobile */
+  .about-section:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    margin: 1.5rem auto;
+    background: linear-gradient(90deg, #0B8B2B, #1EAAF9);
+    box-shadow: 0 0 6px rgba(30,170,249,0.22);
+    border-radius: 2px;
+    opacity: 0.85;
+  }
+}
+@media (max-width: 500px) {
+  .about-hero {
+    padding: clamp(3rem, 10vw, 5rem) 1rem;
+  }
+}

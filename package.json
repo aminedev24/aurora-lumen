@@ -1,0 +1,130 @@
+{
+  "name": "aurora-lumen",
+  "version": "1.0.0",
+  "description": "Aurora Lumen - AI Assistant Platform",
+  "author": "Aurora Team",
+  "private": true,
+  "type": "module",
+  "main": "electron/dist/main.cjs",
+  "scripts": {
+    "dev:frontend": "vite --port 5173 --strictPort",
+    "dev:electron": "npm run build:electron && wait-on http://localhost:5173 && cross-env NODE_ENV=development VITE_DEV_SERVER_URL=http://localhost:5173 electron electron/dist/main.cjs",
+    "electron:dev": "npm run dev:electron",
+    "dev:desktop": "npm-run-all --parallel dev:frontend dev:electron",
+    "dev": "npm run dev:frontend",
+    "build:gh": "vite build --config vite.config.ts --base=/aurora-lumen/",
+    "build:website": "vite build --config vite.config.website.ts",
+    "build:chat": "vite build --config vite.config.web.ts",
+    "build:web": "npm run build:website && npm run build:chat",
+    "build:desktop": "vite build --config vite.config.electron.ts && tsc --project electron/tsconfig.json",
+    "build:all": "npm run build:web && npm run build:desktop",
+    "build:frontend": "npm run build:web",
+    "build:electron": "tsc --project electron/tsconfig.json",
+    "build": "npm run build:desktop",
+    "dist": "npm run build:desktop && electron-builder",
+    "dist:win": "npm run build:desktop && electron-builder --win",
+    "dist:mac": "npm run build:desktop && electron-builder --mac",
+    "dist:linux": "npm run build:desktop && electron-builder --linux",
+    "deploy:web": "npm run build:web",
+    "deploy:all": "npm run build:all",
+    "start": "npm run build:desktop && npx electron electron/dist/main.cjs",
+    "type-check": "tsc --noEmit",
+    "i18n:check": "node scripts/i18n-check.mjs"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans": "^5.2.7",
+    "@fontsource/noto-sans-arabic": "^5.2.7",
+    "@fontsource/noto-sans-sc": "^5.2.6",
+    "@fontsource/noto-sans-tc": "^5.2.6",
+    "@heroicons/react": "^2.2.0",
+    "highlight.js": "^11.11.1",
+    "i18next": "^25.5.2",
+    "immer": "^10.0.2",
+    "lucide-react": "^0.519.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^15.7.3",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.8.2",
+    "recharts": "^3.4.1",
+    "rehype-highlight": "^7.0.2",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.158.0",
+    "uuid": "^11.1.0",
+    "zustand": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^31.0.0",
+    "electron-builder": "^25.1.8",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.19",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.aurora.lumen",
+    "productName": "Aurora Lumen",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/electron/**/*",
+      "electron/dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "public/icon.ico",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "certificateFile": null,
+      "signingHashAlgorithms": [
+        "sha256"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "public/icon.icns",
+      "category": "public.app-category.productivity",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "public/icon.png",
+      "category": "Utility",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

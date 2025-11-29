@@ -1,0 +1,192 @@
+/* ==============================================================================
+ * File: /frontend/src/pages/home/styles/buttons.css
+ * Description: Button variants and hover states
+ * ============================================================================== */
+
+/* Primary button (Aurora gradient) */
+.btn-aurora {
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--aurora-green) 0%, var(--aurora-blue) 100%);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(30, 170, 249, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-aurora:hover {
+  box-shadow: 0 12px 28px rgba(30, 170, 249, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-aurora:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 170, 249, 0.4);
+}
+
+/* Secondary button (ghost style) */
+.btn-secondary {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(30, 170, 249, 0.08);
+  border-color: var(--aurora-blue);
+  color: var(--aurora-blue);
+}
+
+body.dark .btn-secondary:hover {
+  background: rgba(30, 170, 249, 0.15);
+}
+
+/* Link-style button */
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--aurora-blue);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.btn-link:hover {
+  color: var(--aurora-green);
+  text-decoration: underline;
+}
+
+/* Disabled state */
+.btn-aurora:disabled,
+.btn-secondary:disabled,
+.btn-link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon buttons */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: var(--aurora-blue);
+  color: #fff;
+  border-color: var(--aurora-blue);
+  transform: scale(1.05);
+}
+
+/* CTA (Call to Action) button with shimmer effect */
+.btn-cta {
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 1rem 2.5rem;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--aurora-green) 0%, var(--aurora-blue) 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(11, 139, 43, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.btn-cta:hover {
+  box-shadow: 0 14px 32px rgba(11, 139, 43, 0.6);
+  transform: translateY(-4px);
+}
+
+.btn-cta:active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 139, 43, 0.5);
+}
+
+/* Small button variant */
+.btn-sm {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+}
+
+/* Large button variant */
+.btn-lg {
+  font-size: 1.25rem;
+  padding: 1.1rem 2.8rem;
+  border-radius: 20px;
+}
+
+/* Full-width button */
+.btn-full {
+  width: 100%;
+  display: block;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .btn-aurora,
+  .btn-cta {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn-aurora,
+  .btn-group .btn-secondary,
+  .btn-group .btn-cta {
+    width: 100%;
+  }
+}

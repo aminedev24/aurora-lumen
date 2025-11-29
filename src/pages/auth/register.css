@@ -1,0 +1,315 @@
+/* ==============================================================================
+ * Register Details Styles
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------ 
+ * Register Details Layout
+ * ------------------------------------------------------------------------------ */
+.register-details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, rgba(13, 189, 95, 0.15), transparent 55%),
+    radial-gradient(circle at top right, rgba(29, 161, 242, 0.15), transparent 60%),
+    var(--surface, #f5f7fb);
+}
+
+.dark .register-details-page {
+  background: radial-gradient(circle at top left, rgba(13, 189, 95, 0.24), transparent 55%),
+    radial-gradient(circle at top right, rgba(29, 161, 242, 0.3), transparent 60%),
+    #04070c;
+}
+
+.register-details-page .register-layout {
+  flex: 1;
+  width: 100%;
+  max-width: var(--auth-shell-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 5vw, 3rem);
+  padding: var(--auth-side-pad);
+  box-sizing: border-box;
+}
+
+.register-details-page .register-hero,
+.register-details-page .register-panel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 3.25rem);
+  min-height: clamp(320px, 48vh, 520px);
+  border-radius: var(--auth-block-radius);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.register-details-page .register-hero,
+.register-details-page .register-panel {
+  border-radius: 0;
+}
+
+.register-details-page .register-panel {
+  align-self: stretch;
+  height: 100%;
+}
+
+.register-details-page .register-hero {
+  text-align: left;
+  color: #06141b;
+  background: linear-gradient(135deg, rgba(12, 26, 43, 0.92), rgba(13, 212, 105, 0.32));
+}
+
+.register-details-page .register-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.14), transparent 52%),
+    radial-gradient(circle at 80% 82%, rgba(29, 161, 242, 0.18), transparent 58%);
+  pointer-events: none;
+}
+
+.register-details-page .register-hero-inner {
+  width: min(520px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.register-details-page .register-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.65rem);
+  margin-bottom: 0.8rem;
+}
+
+.register-details-page .register-hero p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(6, 20, 27, 0.72);
+  max-width: 420px;
+}
+
+.dark .register-details-page .register-hero {
+  color: #eef3ff;
+  background: linear-gradient(135deg, rgba(6, 9, 16, 0.95), rgba(29, 161, 242, 0.4));
+}
+
+.dark .register-details-page .register-hero p {
+  color: rgba(238, 243, 255, 0.7);
+}
+
+.register-details-page .register-panel {
+  background: rgba(5, 7, 11, 0.95);
+  color: #e8ecf5;
+  box-shadow: var(--auth-panel-shadow);
+}
+
+.register-details-page .register-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 18%, rgba(29, 161, 242, 0.24), transparent 55%),
+    radial-gradient(circle at 82% 82%, rgba(13, 212, 105, 0.22), transparent 58%);
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.dark .register-details-page .register-panel::before {
+  background: radial-gradient(circle at 22% 18%, rgba(29, 161, 242, 0.35), transparent 55%),
+    radial-gradient(circle at 78% 82%, rgba(13, 212, 105, 0.28), transparent 58%);
+}
+
+.register-details-page .register-form {
+  width: min(100%, 500px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-details-page .register-error {
+  background: rgba(255, 99, 99, 0.12);
+  border: 1px solid rgba(255, 99, 99, 0.35);
+  color: #ffd9d9;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+}
+
+.register-details-page .register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-details-page .register-field span,
+.register-details-page .register-field-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(232, 236, 245, 0.82);
+}
+
+.register-details-page .register-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.register-details-page .register-input {
+  background: rgba(8, 12, 20, 0.58);
+  border: 1px solid rgba(73, 85, 118, 0.55);
+  color: #f3f5fa;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-details-page .register-input:focus {
+  outline: none;
+  border-color: rgba(29, 161, 242, 0.9);
+  box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.2);
+}
+
+.register-details-page .register-input.readonly {
+  background: rgba(8, 12, 20, 0.3);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.register-details-page .register-field.duo {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.register-details-page .register-field-control {
+  flex: 1;
+}
+
+.register-details-page .register-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(73, 85, 118, 0.55);
+  background: transparent;
+  color: rgba(232, 236, 245, 0.78);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.register-details-page .register-toggle:hover:not(:disabled) {
+  border-color: rgba(29, 161, 242, 0.65);
+  color: #fff;
+}
+
+.register-details-page .register-toggle.active {
+  background: rgba(29, 161, 242, 0.14);
+  border-color: rgba(29, 161, 242, 0.75);
+  color: #fff;
+}
+
+.register-details-page .register-toggle:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.register-details-page .register-toggle-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.register-details-page .register-password-row {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 46px);
+  gap: 10px;
+}
+
+.register-details-page .register-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(73, 85, 118, 0.5);
+  background: rgba(8, 12, 20, 0.45);
+  color: #e5e9f2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.register-details-page .register-icon-btn:hover:not(:disabled) {
+  border-color: rgba(29, 161, 242, 0.68);
+  background: rgba(8, 12, 20, 0.72);
+  color: #fff;
+}
+
+.register-details-page .register-icon-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-details-page .register-submit {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1da1f2, #0dd469);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-details-page .register-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(29, 161, 242, 0.25);
+}
+
+.register-details-page .register-submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* Media Queries -------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .register-details-page .register-field.duo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .register-details-page .register-password-row {
+    grid-template-columns: 1fr 44px 44px;
+  }
+}
+
+@media (min-width: 960px) {
+  .register-details-page .register-layout {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .register-details-page .register-hero,
+  .register-details-page .register-panel {
+    min-height: clamp(460px, 58vh, 620px);
+  }
+
+  .register-details-page .register-panel {
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1280px) {
+  .register-details-page .register-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+

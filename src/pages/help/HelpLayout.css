@@ -1,0 +1,132 @@
+/* ==============================================================================
+ * File: /frontend/src/pages/help/HelpLayout.css
+ * Aurora Lumen — Help Page Layout + Sidebar Structure
+ * ============================================================================== */
+
+/* ---------- Global Page ---------- */
+.help-page {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  box-sizing: border-box;
+  overflow: visible !important;
+  position: static !important;
+}
+
+/* ---------- Header ---------- */
+.help-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 1080px;
+  margin: 0 auto;
+  background: transparent;
+}
+.help-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--aurora-green), var(--aurora-blue));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.help-subtitle {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+/* ---------- Search ---------- */
+.help-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.help-search-input {
+  min-width: 220px;
+  height: 34px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  outline: none;
+}
+.help-search-input:focus {
+  border-color: var(--aurora-blue);
+  box-shadow: 0 0 0 3px rgba(30, 170, 249, 0.15);
+}
+
+/* ---------- Layout Grid ---------- */
+.help-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+.help-content {
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+/* ---------- Sidebar ---------- */
+.help-sidebar {
+  position: static;
+  align-self: start;
+  padding: 1rem;
+  background: transparent;
+  border-right: 1px solid var(--border);
+}
+.help-nav-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.help-nav-btn:hover {
+  background: rgba(30, 170, 249, 0.08);
+}
+.help-nav-btn.active {
+  background: linear-gradient(90deg, rgba(11,139,43,0.25), rgba(30,170,249,0.25));
+  color: #000;
+}
+body.dark .help-nav-btn.active { color: #fff; }
+
+/* ---------- Sticky Sidebar (Desktop) ---------- */
+@media (min-width: 901px) {
+  .help-sidebar {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    border-right: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .help-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+/* ==============================================================================
+ * Aurora Lumen — Help Page (Modularized)
+ * This file has been split into:
+ *  - HelpLayout.css  → handles layout, grid, sticky sidebar, structure.
+ *  - HelpElements.css → handles cards, FAQ, themes, visuals, and mobile tabs.
+ * ============================================================================== */
+
+@import "./HelpLayout.css";
+@import "./HelpElements.css";

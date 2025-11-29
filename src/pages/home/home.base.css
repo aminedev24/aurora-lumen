@@ -1,0 +1,15 @@
+/* ==============================================================================
+ * frontend/src/pages/home.base.css
+ * Aurora Lumen Web Theme — Modular Imports
+ * ============================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap");
+
+/* Modular CSS imports */
+@import "./styles/variables.css";
+@import "./styles/responsive.css";
+@import "./styles/topbar.css";
+@import "./styles/typography.css";
+@import "./styles/buttons.css";
+@import "./styles/contact.css";
+@import "./styles/footer.css";

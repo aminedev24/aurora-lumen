@@ -1,0 +1,186 @@
+.experimental-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.experimental-main {
+  padding: clamp(2rem, 6vw, 4rem) 0 3rem;
+}
+
+.experimental-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 480px) minmax(280px, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: stretch;
+  position: relative;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  margin: 0 auto;
+  width: min(1100px, calc(100% - 2rem));
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 32px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+body.dark .experimental-hero {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.experimental-eyebrow {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--aurora-green, #0B8B2B);
+  margin-bottom: 0.5rem;
+}
+
+.experimental-copy h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.experimental-lede {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted, #475569);
+  margin-bottom: 1.25rem;
+}
+
+.experimental-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experimental-copy,
+.experimental-control label,
+.experimental-control select,
+.experimental-control textarea {
+  color: var(--text, #0f172a);
+}
+
+.experimental-control label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.experimental-control select,
+.experimental-control textarea {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 12px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.dark .experimental-control select,
+body.dark .experimental-control textarea {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.4);
+  color: #e2e8f0;
+}
+
+.experimental-control textarea {
+  resize: vertical;
+}
+
+.experimental-apply-btn {
+  margin-top: 0.5rem;
+  box-shadow: 0 16px 32px rgba(30, 170, 249, 0.22);
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.preset-button {
+  flex: 1 1 120px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text, #0f172a);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.65rem 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+body.dark .preset-button {
+  background: rgba(15, 23, 42, 0.82);
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #e2e8f0;
+}
+
+.preset-button:hover,
+.preset-button:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(30, 170, 249, 0.6);
+  box-shadow: 0 14px 32px rgba(30, 170, 249, 0.2);
+  outline: none;
+}
+
+.preset-button.is-active {
+  background: linear-gradient(120deg, var(--aurora-green, #0b8b2b), var(--aurora-blue, #1eaaf9));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 18px 38px rgba(30, 170, 249, 0.3);
+}
+
+body.dark .preset-button.is-active {
+  box-shadow: 0 18px 38px rgba(30, 170, 249, 0.4);
+}
+
+.experimental-droid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.experimental-droid .droid-body {
+  transform: scale(0.9);
+}
+
+.experimental-notes {
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  width: min(1100px, calc(100% - 2rem));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.experimental-note-card {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+body.dark .experimental-note-card {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.experimental-note-card h2 {
+  margin-bottom: 0.85rem;
+}
+
+.experimental-note-card ul {
+  padding-left: 1.15rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .experimental-hero {
+    grid-template-columns: 1fr;
+  }
+}

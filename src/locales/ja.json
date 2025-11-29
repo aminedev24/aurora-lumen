@@ -1,0 +1,193 @@
+﻿{
+  "brand": {
+    "name": "オーロラ・ルーメン"
+  },
+  "nav": {
+    "home": "ホーム",
+    "chat": "チャット",
+    "help": "ヘルプ",
+    "contact": "お問い合わせ",
+    "toggleLight": "ライトテーマに切り替え",
+    "toggleDark": "ダークテーマに切り替え",
+    "account": "アカウント"
+  },
+  "hero": {
+    "title": "オーロラ・ルーメン",
+    "subtitle": "知識への道を照らす"
+  },
+  "cards": {
+    "chat": {
+      "title": "Aurora Lumenとチャット",
+      "desc": "Aurora Lumenと会話を始めましょう。知識を探求し、質問し、すぐに答えを得ることができます。",
+      "button": "チャットに入る"
+    },
+    "learn": {
+      "title": "もっと知る",
+      "desc": "Aurora LumenはAI、記憶、知識を探求する実験的プロジェクトです。その目的と機能を発見してください。",
+      "button": "もっと知る"
+    }
+  },
+  "footer": {
+    "about": "概要",
+    "auroraChat": "Aurora Lumenチャット",
+    "legalSafety": "法的事項と安全",
+    "contact": "お問い合わせ",
+    "copyright": "© {{year}} Aurora Lumen — Artisbay Inc.によるプロジェクト"
+  },
+  "general": {
+    "add": "追加",
+    "delete": "削除",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "create": "作成",
+    "owner": "オーナー",
+    "collapse": "折りたたむ",
+    "expand": "展開する",
+    "planFree": "無料プラン",
+    "auroraName": "Aurora"
+  },
+  "about": {
+    "title": "Aurora Lumenについて",
+    "tagline": "Auroraはあなたが話す人格であり、Lumen — ラテン語で「光」 — はそれを導くビジョンです。",
+    "section1Title": "私たちの使命",
+    "section1Text": "Aurora Lumenは好奇心を刺激し、発見を促すために構築されています。高度なAIと進化する記憶を組み合わせることで、Auroraは生き生きとした、継続的で深い意味を持つ会話を作り出します。",
+    "section1Extra": "私たちは自然からインスピレーションを得ています。オーロラの光が夜空の下で人々を落ち着かせ、鼓舞するように、Aurora Lumenは日常生活で自然で安心できる存在になるよう設計されています。",
+    "features": {
+      "memory": {
+        "title": "生きた記憶",
+        "desc": "Aurora Lumenは過去の会話を思い出し、継続性と文脈を提供します。"
+      },
+      "modes": {
+        "title": "複数のモード",
+        "desc": "Auroraはニーズに合わせて適応します。"
+      },
+      "knowledge": {
+        "title": "知識 + RAG",
+        "desc": "ファイルをアップロードするとAuroraが回答に統合します。"
+      },
+      "workspace": {
+        "title": "ワークスペース（工事中）",
+        "desc": "会話やプロジェクトを整理します。"
+      },
+      "language": {
+        "title": "Auroraはあなたの言語を話します",
+        "desc": "英語、日本語、フランス語、アラビア語、スペイン語など。"
+      },
+      "evolution": {
+        "title": "進化",
+        "desc": "Aurora Lumenは常に進化し続けます。"
+      }
+    },
+    "underConstruction": "（工事中）",
+    "sections": {
+      "memory": {
+        "p1": "Auroraの「生きた記憶」は、会話中の短期的な作業記憶のようなものです。進行中のセッションを記憶し、文脈を保ちながら自然に応答します。",
+        "p2": "この記憶はセッションに限定され、終了すると古い発言は順に消えます。"
+      },
+      "eternalMemory": {
+        "p1": "Auroraの永続記憶は、チャット終了後も消えずに情報を保持します。",
+        "p2": "数か月後でもAuroraはあなたを覚えており、異なるモードやプロジェクトをまたいでサポートします。",
+        "p3": "生きた記憶が一時的な会話のバッファなら、永続記憶はAuroraの中にあるあなたの伝記です。"
+      },
+      "knowledge": {
+        "p1": "Auroraは検索拡張生成（RAG）で膨大な情報源に接続します。"
+      },
+      "modes": {
+        "p1": "目的に合わせてモードを切り替えられます。"
+      },
+      "workspace": {
+        "p1": "ワークスペースはAuroraと共有するキャンバスです。",
+        "p2": "すべてが整理され、再開できます。"
+      },
+      "evolution": {
+        "p1": "Auroraはアップデートごとに進化します。",
+        "p2": "変化に追随するだけでなく、その中で活躍できるようになります。"
+      }
+    },
+    "quote": "未来は学び、適応し、進化する者のものだ。"
+  },
+ "help": {
+  "title": "ヘルプ",
+  "subtitle": "Aurora の仕組みを学び、その機能を最大限に活用しましょう。",
+  "menu": {
+    "overview": "Aurora Lumen とは？",
+    "memory": "Aurora の記憶",
+    "modes": "Aurora のモード",
+    "workspace": "ワークスペース（開発中）",
+    "themes": "テーマとスキン",
+    "attachments": "添付ファイル（開発中）",
+    "disclaimer": "免責事項",
+    "privacy": "プライバシー",
+    "notes": "個人メモ",
+    "internet": "インターネット検索",
+    "plans": "プラン",
+    "safety": "安全性"
+  },
+  "overview": {
+    "title": "Aurora Lumen とは？",
+    "p1": "Aurora Lumen は、記憶・創造・知識を探求する実験的な AI プラットフォームです。",
+    "p2": "本プロジェクトは、横浜に拠点を置く Artisbay Inc. によって支援されています。"
+  },
+  "memory": {
+    "title": "Aurora の記憶",
+    "p1": "Aurora には、セッションメモリと長期メモリの 2 種類があります。"
+  },
+  "modes": {
+    "title": "Aurora のモード",
+    "p1": "Aurora は目的に合わせてスタイルを切り替えることができます。"
+  },
+  "workspace": {
+    "title": "ワークスペース（開発中）",
+    "p1": "Aurora 内のあなたのプロジェクトデスクです。メモ、下書き、ファイル、会話を整理します。",
+    "highlight": "ワークスペースはランダムなチャットを整理された継続的な作業に変えます。"
+  },
+  "themes": {
+    "title": "テーマとスキン"
+  },
+  "attachments": {
+    "title": "添付ファイル（開発中）",
+    "p1": "ファイルを会話に追加し、直接質問できます。"
+  },
+  "internet": {
+    "title": "インターネット検索"
+  },
+  "disclaimer": {
+    "title": "免責事項：Aurora は誤る場合があります",
+    "p1": "Aurora は賢いですが完全ではありません。重要な情報は必ず確認してください。"
+  },
+  "privacy": {
+    "title": "プライバシー",
+    "p1": "Artisbay Inc. はあなたの個人情報を厳重に管理します。"
+  },
+  "safety": {
+    "title": "安全性"
+  },
+  "notes": {
+    "title": "個人メモ",
+    "p1": "メモ機能でリマインダーや設定を保存し、Aurora がチャット間で覚えておけます。"
+  },
+  "plans": {
+    "title": "Aurora プラン比較",
+    "subtitle": "Aurora には 3 つのアカウントレベルがあり、いつでも変更できます。",
+    "free": {
+      "title": "無料（ゲスト）",
+      "li1": "登録不要ですぐに Aurora Light を利用可能。",
+      "li2": "アップロードとマイクはサインイン後に有効になります。",
+      "li3": "短い質問や軽い会話に最適です。"
+    },
+    "standard": {
+      "title": "スタンダード",
+      "badge": "7 日間の Aurora Plus トライアル付き",
+      "li1": "試用後、拡張メモリ機能を含む Aurora Standard にアクセス可能。",
+      "li2": "1 日の利用制限と進捗追跡を提供。",
+      "li3": "学習や個人の生産性に最適です。"
+    },
+    "plus": {
+      "title": "プラス",
+      "li1": "常時コンテキスト保持と優先処理によるフルパフォーマンス。",
+      "li2": "AI と共同でコンテンツを作成するワークスペース、オートメーションツール、完全なデータエクスポート。",
+      "li3": "プロフェッショナルやクリエイター、チームに最適です。"
+    }
+  }
+}
+}

@@ -1,0 +1,26 @@
+# Aurora Lumen public media headers for HostGator / Apache
+
+# Ensure proper MIME types
+AddType video/mp4 .mp4
+AddType audio/mpeg .mp3
+
+<IfModule mod_headers.c>
+  # Allow range requests so browsers can seek within media
+  Header set Accept-Ranges bytes
+  # Allow cross-origin requests for these static assets if embedded elsewhere
+  <FilesMatch "\.(mp4|mp3)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# Optional: prevent caching issues during updates
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType video/mp4 "access plus 7 days"
+  ExpiresByType audio/mpeg "access plus 7 days"
+</IfModule>
+AddType video/webm .webm
+
+# Disable gzip for media to avoid range/seek issues
+SetEnvIfNoCase Request_URI \\.(mp4|mp3|webm)$ no-gzip
+

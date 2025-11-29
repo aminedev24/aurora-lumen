@@ -1,0 +1,444 @@
+{
+    "brand": {
+        "name": "Aurora Lumen"
+    },
+    "nav": {
+        "home": "Home",
+        "chat": "Chat",
+        "help": "Help",
+        "contact": "Contact",
+        "menu": "Menu",
+        "toggleLight": "Switch to light theme",
+        "toggleDark": "Switch to dark theme",
+        "account": "Account"
+    },
+    "hero": {
+        "title": "Aurora Lumen",
+        "subtitle": "Enlighten your path to knowledge"
+    },
+    "cards": {
+        "chat": {
+            "title": "Chat with Aurora Lumen",
+            "desc": "Start a conversation powered by Aurora Lumen. Explore knowledge, ask questions, and get responses instantly.",
+            "button": "Enter Chat"
+        },
+        "learn": {
+            "title": "Learn More",
+            "desc": "Aurora Lumen is an experimental project exploring AI, memory, and knowledge. Discover its purpose and what it can do.",
+            "button": "Learn More"
+        }
+    },
+    "footer": {
+        "about": "About",
+        "auroraChat": "Aurora Lumen Chat",
+        "legalSafety": "Legal & Safety",
+        "contact": "Contact Us",
+        "copyright": "© {{year}} Aurora Lumen — A project by Artisbay Inc."
+    },
+    "general": {
+        "add": "Add",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "close": "Close",
+        "create": "Create",
+        "auroraName": "Aurora",
+        "owner": "Owner",
+        "collapse": "Collapse",
+        "expand": "Expand",
+        "planFree": "Free"
+    },
+    "about": {
+        "title": "About Aurora Lumen",
+        "tagline": "Aurora is the persona you talk to, and Lumen — Latin for light — is the vision that guides it.",
+        "section1Title": "Our Mission",
+        "section1Text": "Aurora Lumen is built to enlighten curiosity and empower discovery. By combining advanced AI with evolving memory, Aurora Lumen strives to create conversations that feel alive, continuous, and deeply meaningful.",
+        "section1Extra": "We are inspired by nature. Just as the Aurora lights calm and inspire people under the night sky, Aurora Lumen is designed to feel natural and relieving in your daily life. Its presence should feel as organic as its name suggests — bright, flowing, and always there to guide you.",
+        "quote": "The future belongs to those who learn, adapt, and evolve."
+    },
+    "legal": {
+        "title": "Legal & Safety",
+        "disclaimerTitle": "Legal Disclaimer",
+        "disclaimer": "Aurora Lumen is an AI system. It generates responses based on data and models, not human judgment. While designed to be accurate and helpful, Aurora’s outputs may contain errors. Users are responsible for verifying critical information and for all actions taken based on Aurora’s responses.",
+        "privacyTitle": "Privacy & Data Use",
+        "privacy": "Conversations may be stored to provide memory and continuity. These memories are never sold to third parties. Uploaded files are processed only to answer your questions and remain private to your account.",
+        "safetyTitle": "Safety & Responsible Use",
+        "safety": "Aurora should not be relied upon for medical, legal, or financial advice. Do not use Aurora to create or spread harmful, illegal, or misleading content. Use Aurora as a supportive tool, not a substitute for professional expertise."
+    },
+    "contact": {
+        "title": "Contact Us",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "thanks": "Thank you for reaching out. We’ll get back to you soon."
+    },
+    "chat": {
+        "continue": "Continue"
+    },
+    "auth": {
+        "login": "Sign in",
+        "register": "Register",
+        "signup": "Sign up",
+        "signout": "Sign out",
+        "haveAccount": "Have an account? Sign in",
+        "usernameOrEmail": "Username or Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "forgot": "Forgot password?",
+        "google": "Sign in with Google",
+        "hero": "Why people use Aurora Lumen",
+        "heroCopy": "Aurora adapts to your plans, your style, and your workflow—sign in to pick up where you left off.",
+        "autoUsername": "Auto",
+        "manualUsername": "Manual",
+        "registerDetails": "Complete your profile details",
+        "registerIntro": "Sign up is free. Unlock Aurora Lumen with your account.",
+        "processing": "Processing...",
+        "passwordMismatch": "Passwords do not match.",
+        "registerFailed": "Registration failed.",
+        "invalid": "Invalid credentials.",
+        "requestFailed": "Request failed.",
+        "enterEmailReset": "Enter your email to reset password.",
+        "resetSent": "If that email exists, a reset link has been sent.",
+        "resetFailed": "Failed to request reset.",
+        "resetTitle": "Reset Password",
+        "resetSubtitle": "Enter a new password to secure your Aurora account.",
+        "resetSuccess": "Password updated. Redirecting to login...",
+        "resetConfirm": "Reset",
+        "samples": [
+            "Draft me a job application",
+            "Help me pick the perfect gift",
+            "Explain black holes in simple words",
+            "Translate this contract into Arabic",
+            "Suggest recipes with chicken and rice",
+            "Make a study plan for my exam",
+            "Summarize this long PDF for me",
+            "Teach me basic Japanese phrases",
+            "Plan a 3-day trip to Paris",
+            "Generate ideas for my startup"
+        ]
+    },
+    "settings": {
+        "title": "Account",
+        "user": "User",
+        "owner": "Owner",
+        "plan": "Plan",
+        "free": "Free",
+        "plus": "Aurora Plus",
+        "language": "Language",
+        "langAuto": "System default (auto)",
+        "close": "Close",
+        "deleteTitle": "Delete account",
+        "deleteNotice": "Deleting your account signs you out immediately. Your chats and projects might be kept for a while, but you will no longer be able to sign in.",
+        "deleteAccount": "Delete my account",
+        "deleteWarning": "This action is permanent. We’ll retain your basic contact details but remove your sign-in access.",
+        "deleteReasonLabel": "Why are you leaving? (optional)",
+        "deleteReasonPlaceholder": "Share any feedback to help us improve.",
+        "deleteConfirm": "Yes, delete my account",
+        "deleteCancel": "Cancel",
+        "deleteProcessing": "Deleting...",
+        "deleteError": "Failed to delete account. Please try again.",
+        "deleteSuccess": "Your account has been deleted. You're signed out.",
+        "dataControl": {
+            "heading": "Data Control",
+            "badge": "Export data",
+            "helper": "Choose a format. JSON → true structure, TXT → light format.",
+            "helperLoggedOut": "Sign in to access your data export options.",
+            "txtLabel": "Plain text (.txt)",
+            "txtDescription": "Simple, human-readable summary for quick review or sharing.",
+            "jsonLabel": "JSON (.json)",
+            "jsonDescription": "Structured export for backups or importing into other tools.",
+            "loginRequired": "You need to be signed in to export your data.",
+            "preparing": "Preparing…",
+            "download": "Download",
+            "success": "Your data export is ready.",
+            "errorFallback": "We couldn't prepare the export. Please try again.",
+            "signIn": "Exports become available once you're signed in.",
+            "includeIdentity": "Include user identity",
+            "includePersona": "Include AI persona",
+            "loadingMeta": "Loading profile details…"
+        }
+    },
+    "accountPage": {
+        "sections": {
+            "identity": "User Identity",
+            "subscription": "Subscription",
+            "security": "Security",
+            "persona": "Personalization",
+            "data": "Data Control",
+            "app": "App Settings",
+            "about": "About & Links"
+        },
+        "settingsHint": "Language preferences sync across the web app.",
+        "aboutLinks": {
+            "about": "About Aurora",
+            "help": "Help Center",
+            "legal": "Legal & Safety"
+        }
+    },
+    "security": {
+        "devices": {
+            "title": "Devices & sessions",
+            "desc": "View and manage devices currently logged into Aurora.",
+            "thisDevice": "This device",
+            "signOut": "Sign out",
+            "signOutOthers": "Sign out of other devices",
+            "refresh": "Refresh",
+            "lastActive": "Last active {{value}}",
+            "ip": "IP {{ip}}",
+            "empty": "No active sessions found.",
+            "fetchError": "Could not load sessions.",
+            "revokeError": "Unable to sign out that session.",
+            "unknown": "Unknown"
+        },
+        "mfa": {
+            "title": "Multi-factor authentication",
+            "desc": "Add an extra verification step to keep your Aurora account safe.",
+            "enabledDesc": "Extra security is enabled. You'll need a verification code sent to your email when signing in.",
+            "enable": "Enable MFA",
+            "disable": "Disable MFA",
+            "confirmDisable": "Are you sure you want to disable multi-factor authentication?",
+            "enterCode": "Enter the 6-digit code sent to your email:",
+            "verificationRequired": "Verification Required",
+            "verificationCode": "Verification Code",
+            "loginDescription": "A 6-digit verification code has been sent to your email. Please enter it below to complete sign-in.",
+            "invalidCode": "Invalid or expired code",
+            "verificationFailed": "Verification failed. Please try again.",
+            "codeSent": "A new code has been sent to your email",
+            "resendCode": "Resend code",
+            "resendFailed": "Failed to resend code"
+        }
+    },
+    "help": {
+        "title": "Help",
+        "subtitle": "Learn how Aurora works and make the most out of its features.",
+        "menu": {
+            "overview": "What is Aurora Lumen?",
+            "memory": "How Aurora Remembers",
+            "modes": "Aurora’s Modes",
+            "workspace": "Workspace (under construction)",
+            "themes": "Themes & Skins",
+            "internet": "Internet Search",
+            "attachments": "Attachments (under construction)",
+            "disclaimer": "Disclaimer",
+            "privacy": "Privacy",
+            "notes": "Personal Notes",
+            "plans": "Plans",
+            "safety": "Safety"
+        },
+        "overview": {
+            "title": "What is Aurora Lumen?",
+            "p1": "Aurora Lumen is an experimental AI platform built to explore memory, creativity, and knowledge in a natural conversation. It’s designed to feel like a companion who learns with you over time — whether for study, work, or daily inspiration.",
+            "p2": "Aurora Lumen is sponsored by Artisbay Inc., a consulting company based in Yokohama, Japan."
+        },
+        "memory": {
+            "title": "How Aurora Remembers",
+            "p1": "Aurora has short and long memory layers that adapt over time.",
+            "shortTitle": "Short-term memory",
+            "short1": "Lives only inside the current conversation and refreshes whenever you start a new chat.",
+            "short2": "Use inline reminders like \"remember I live in Tokyo\" to keep context for the rest of the thread.",
+            "longTitle": "Long-term memory (Living Memory)",
+            "long1": "Stores the notes and preferences you explicitly pin inside Account → Data.",
+            "long2": "Aurora promotes information slowly so only high-signal facts become part of your profile.",
+            "long3": "You can inspect, export, or delete every long-term memory from the web account at any time.",
+            "faq1": {
+                "q": "Does Aurora remember everything I say?",
+                "a": "No. Session history is temporary; only pinned notes or explicit reminders graduate into long-term memory."
+            },
+            "faq2": {
+                "q": "How do I clear Aurora's memory?",
+                "a": "Use /reset (or start a new chat) to wipe the current session, and use Account → Data to delete long-term notes."
+            },
+            "faq3": {
+                "q": "Can I opt out of Living Memory?",
+                "a": "Yes. Disable Living Memory in Account settings and Aurora will treat every session as ephemeral."
+            }
+        },
+        "modes": {
+            "title": "Aurora’s Modes",
+            "p1": "Aurora can switch personalities to fit your needs.",
+            "description1": "Aurora swaps between guided personalities so you can pick the right tone for the job.",
+            "description2": "Each mode keeps the same safety guardrails but adjusts curiosity, structure, and voice.",
+            "aurora": {
+                "title": "Aurora",
+                "body1": "Balanced reasoning plus warmth — the classic everyday companion.",
+                "body2": "Great for brainstorming, research, and personal check-ins."
+            },
+            "lumen": {
+                "title": "Lumen",
+                "body1": "Research-focused with citations and deeper drilling into sources.",
+                "body2": "Use it when you need structured reports, briefs, or multi-step plans."
+            },
+            "focus": {
+                "title": "Focus",
+                "body1": "Concise answers, minimal flourish, and task-first replies.",
+                "body2": "Ideal for checklists, summaries, and getting straight to the point."
+            },
+            "play": {
+                "title": "Play",
+                "body1": "Lightweight, imaginative responses with a friendlier tone.",
+                "body2": "Perfect for creative writing prompts and mood lifting conversations."
+            }
+        },
+        "workspace": {
+            "title": "Workspace (under construction)",
+            "p1": "Organize your projects, research, and ideas in a single place.",
+            "p2": "Projects keep chats, files, and notes aligned so you can return later without hunting.",
+            "projectsTitle": "Projects",
+            "projects1": "Group related chats, files, and tasks together.",
+            "projects2": "Assign a default mode or goal for every project.",
+            "projects3": "Invite trusted collaborators (coming soon).",
+            "sharingTitle": "Sharing & handoff",
+            "sharing1": "Generate share links that expire automatically.",
+            "sharing2": "Export an entire project as Markdown or JSON.",
+            "sharing3": "Lock sensitive projects behind admin approval."
+        },
+        "themes": {
+            "title": "Themes & Skins",
+            "p1": "Signature skins recolor the entire app while keeping accessibility contrast intact.",
+            "p2": "Choose any skin on desktop or mobile — it syncs automatically with your account.",
+            "tiger": "Molten amber gradients with bold striping for high-contrast focus sessions.",
+            "zebra": "Monochrome elegance brushed with soft gold — a minimalist feel.",
+            "cheetah": "Sunlit neutrals with subtle motion spots for a warm studio palette."
+        },
+        "internet": {
+            "title": "🌐 Internet Search & Web Scraping",
+            "p1": "Aurora can search the internet and scrape websites for detailed content analysis.",
+            "p2": "Aurora will call the browser when your question needs up-to-date facts or website content.",
+            "li1": "Cites every article it pulls into the answer.",
+            "li2": "Respects SafeSearch and your workspace privacy controls.",
+            "li3": "Only runs for verified users or when an admin enables browsing.",
+            "li4": "Check specific websites: 'Check this website https://example.com'",
+            "li5": "Safety validated: Only fetches from safe, public URLs.",
+            "li6": "Enhanced scraping: Extracts headings, tables, code blocks, and structured data.",
+            "li7": "Use 'quick summary' for fast text, 'full details' for tables/code extraction."
+        },
+        "attachments": {
+            "title": "Attachments (under construction)",
+            "p1": "Upload your own files and ask questions directly about them.",
+            "p2": "Supported formats include PDF, DOCX, TXT, and images (with OCR).",
+            "what": "What you can do",
+            "li1": "Summarize or search a document in plain language.",
+            "li2": "Reference multiple files inside the same conversation.",
+            "li3": "Use attachment memory to keep key passages handy."
+        },
+        "disclaimer": {
+            "title": "Disclaimer: Aurora Can Still Make Mistakes",
+            "p1": "Aurora is smart and adaptive, but not perfect. Always double-check important information."
+        },
+        "privacy": {
+            "title": "Personal Info Handling",
+            "p1": "Aurora is sponsored by Artisbay Inc., which manages personal data securely.",
+            "p2": "Uploads stay encrypted at rest. Admins can export or delete everything from the Data tab.",
+            "faq1": {
+                "q": "Who can see my conversations?",
+                "a": "Only you and approved admins. Aurora never sells or shares your data with third parties."
+            },
+            "faq2": {
+                "q": "How long are files stored?",
+                "a": "Files remain until you delete them or until your retention window (configurable by the owner) expires."
+            }
+        },
+        "safety": {
+            "title": "Safety",
+            "p1": "Aurora declines harmful, medical, or illegal instructions and keeps moderation in place across every mode.",
+            "p2": "If you ever see unsafe behavior, let us know at contact@aurora-lumen.com so we can review and improve the safeguards."
+        },
+        "notes": {
+            "title": "Personal Notes",
+            "p1": "Notes let you capture quick reminders and details Aurora should remember across chats.",
+            "faq1": {
+                "q": "What are Notes used for?",
+                "a1": "Notes capture facts Aurora should remember across chats.",
+                "a2": "Think goals, ongoing projects, or personal preferences."
+            },
+            "faq2": {
+                "q": "How do I organize notes?",
+                "a1": "Open the Notes drawer in the chat sidebar.",
+                "a2": "Tag notes with categories (Work, Personal, Study).",
+                "a3": "Set reminders so Aurora brings them up proactively.",
+                "a4": "Archive notes that are no longer relevant."
+            },
+            "faq3": {
+                "q": "Can I export or delete notes?",
+                "a1": "Yes — head to Account → Data.",
+                "a2": "Exports arrive via email and include every note plus timestamps."
+            },
+            "advancedTitle": "Advanced notes workflows",
+            "advancedGuides": "Advanced note guides",
+            "advTemplatesQ": "Do you have note templates?",
+            "advTemplatesA1": "Use the Template gallery to start with meeting notes, journaling prompts, or study logs.",
+            "advTemplatesA2": "Customize them and Aurora will reuse your layout next time.",
+            "advExportQ": "Can I export notes automatically?",
+            "advExportA1": "Yes — enable weekly exports to your verified email.",
+            "advExportA2": "You can also push notes into Notion or Obsidian via Zapier.",
+            "advExportA3": "Disable the automation anytime from Account → Data.",
+            "advAutoQ": "Will Aurora add notes for me?",
+            "advAutoA1": "Aurora suggests notes when it spots recurring facts.",
+            "advAutoA2": "You still confirm every suggestion before it sticks.",
+            "advAutoA3": "Say \"save this as a note\" to force an entry.",
+            "advAutoA4": "Use \"forget that note\" to delete it immediately.",
+            "advAutoA5": "Admins can disable auto-suggestions under account settings.",
+            "advCollaborateQ": "Can teams share notes?",
+            "advCollaborateA1": "Shared workspaces let trusted teammates see project notes (feature flag).",
+            "advChecklistQ": "Do you support checklists?",
+            "advChecklistA1": "Yes — add [ ] to create tasks Aurora can update.",
+            "advChecklistA2": "Use /check to mark tasks complete.",
+            "advChecklistA3": "Mention dates to receive reminders in chat.",
+            "advCleanupTitle": "Cleanup & hygiene",
+            "advCleanup1": "Archive stale notes every quarter.",
+            "advCleanup2": "Export a backup before deleting anything major.",
+            "advCleanup3": "Use filters to batch-delete old reminders.",
+            "advDraftsTitle": "Draft faster",
+            "advDrafts1": "Keep snippets for bios, signature blocks, or FAQ answers.",
+            "advDrafts2": "Ask Aurora to merge snippets into polished responses.",
+            "advFindTitle": "Find info fast",
+            "advFind1": "Search notes by tag or keyword right inside the sidebar.",
+            "advFind2": "Use /note <query> to jump to a note in chat.",
+            "advLangTitle": "Multilingual notes",
+            "advLang1": "Aurora can store notes in any supported language and auto-translate on recall.",
+            "advLongTermTitle": "Long-term planning",
+            "advLongTerm1": "Pin quarterly goals and let Aurora revisit them in weekly check-ins.",
+            "advLongTerm2": "Attach related chats so context travels with the goal.",
+            "advNotifyTitle": "Notifications",
+            "advNotify1": "Enable email nudges for high-priority notes you don't want to forget.",
+            "advPinTitle": "Pinned notes",
+            "advPin1": "Drag a note to the top to keep it visible while you chat.",
+            "advSaveTitle": "Save smarter",
+            "advSave1": "Highlight text and press Ctrl+Shift+S to save it as a note.",
+            "advSave2": "Use /note <text> in chat to capture ideas without opening the drawer.",
+            "advSave3": "Attach files to a note for richer reference.",
+            "advSave4": "Link a note to multiple projects at once.",
+            "advSummariesTitle": "Summaries",
+            "advSummaries1": "Summarize long meetings into bullet notes.",
+            "advSummaries2": "Tag summaries with people or teams for quick mentions.",
+            "advSummaries3": "Share summary links with collaborators.",
+            "advTasksTitle": "Tasks",
+            "advTasks1": "Convert any note into a to-do item.",
+            "advTasks2": "Assign owners and due dates.",
+            "advTasks3": "Sync completed tasks back to your project log."
+        },
+        "plans": {
+            "title": "Compare Aurora plans",
+            "subtitle": "Aurora offers three account levels. Upgrade or downgrade anytime inside your web account.",
+            "free": {
+                "title": "Free (guest)",
+                "li1": "No registration required — use Aurora Light instantly.",
+                "li2": "Uploads and microphone are disabled until you sign in.",
+                "li3": "Great for quick questions with lightweight context."
+            },
+            "standard": {
+                "title": "Standard",
+                "badge": "Includes 7-day Aurora Plus trial",
+                "li1": "Access Aurora Standard after your trial — includes advanced memory features.",
+                "li2": "Daily usage allowance and continuous progress tracking.",
+                "li3": "Best for personal study or productivity."
+            },
+            "plus": {
+                "title": "Plus",
+                "li1": "Full performance tier with continuous context and priority compute.",
+                "li2": "Workspace for content creation collaborating with the AI, automation tools, and full data export.",
+                "li3": "Best for professionals, creators, and teams."
+            }
+        }
+    }
+}

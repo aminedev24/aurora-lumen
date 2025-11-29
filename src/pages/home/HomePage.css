@@ -1,0 +1,16 @@
+/* ============================================================================== 
+ * Aurora Lumen — Modularized Home + Public Page Styles 
+ * Includes all top-level visual sections and shared public themes.
+ * ============================================================================== */
+
+/* Base and shared Aurora themes */
+@import "./home.base.css";
+@import "./home.sections.css";
+@import "./home.hero.css";
+@import "./home.content.css";
+
+/* Authentication pages */
+@import "../auth/index.css";
+
+/* About, Help, Contact, Legal */
+@import "../about/about.css";

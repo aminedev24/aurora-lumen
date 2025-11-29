@@ -1,0 +1,453 @@
+/* ==========================================================================
+ * Aurora Lumen — Web Account (Investment layout) — Condensed + Light Fix
+ * - Keeps all class names; safe drop-in
+ * - Explicit light-theme colors; dark mode stays under body.dark
+ * ========================================================================== */
+
+/* ---------- Shell ---------- */
+.web-account-body { padding: clamp(2rem, 5vw, 3rem) 1.5rem 4rem; }
+.web-account-hero { text-align: center; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.web-account-hero .web-account-greeting { max-width: 720px; margin: 0 auto; }
+.web-account-hero .eyebrow {
+  text-transform: uppercase; letter-spacing: .08em; font-size: .85rem;
+  color: var(--aurora-green); margin-bottom: .4rem; font-weight: 600;
+}
+.web-account-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 800; color: var(--text, #0f172a);
+  margin-bottom: .75rem;
+}
+.web-account-hero p { max-width: 760px; margin: 0 auto; color: var(--muted, #475569); }
+
+/* ---------- Alerts (light) ---------- */
+.web-account-alert {
+  max-width: 960px; margin: 0 auto 1rem; padding: .85rem 1rem;
+  border-radius: 14px; font-weight: 600;
+}
+.web-account-alert.error { background: #fee2e2; color: #b91c1c; }     /* red-100 bg, red-700 text */
+.web-account-alert.success { background: #dcfce7; color: #047857; }   /* green-100 bg, green-700 text */
+
+/* ---------- Verified badges (light) ---------- */
+.web-account-verified-badge {
+  display: flex; gap: .6rem; align-items: center;
+  border-radius: 14px; padding: .75rem 1rem; margin-bottom: 1rem;
+  border: 1px solid rgba(148,163,184,.2);
+}
+.web-account-verified-badge.is-verified { background: #ecfdf5; color: #065f46; }    /* teal-50, teal-800 */
+.web-account-verified-badge.is-unverified { background: #fef3c7; color: #b45309; }  /* amber-100, amber-700 */
+
+/* ---------- Layout ---------- */
+.web-account-layout {
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  max-width: 980px; margin: 0 auto; width: 100%;
+  padding: 0 1rem; box-sizing: border-box;
+}
+
+/* ---------- Left Nav ---------- */
+.web-account-nav {
+  position: sticky; top: 96px; align-self: start;
+  background: rgba(255,255,255,.9);                /* light: clear surface */
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 18px; padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(15,23,42,.06);
+}
+.web-account-nav .nav-title {
+  text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;
+  margin-bottom: .75rem; color: var(--muted, #475569);
+}
+.web-account-nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: .4rem;
+}
+.web-account-nav button {
+  width: 100%; text-align: left; border: 0; background: transparent; color: inherit;
+  padding: .45rem .5rem; border-radius: 10px; font-weight: 600; cursor: pointer;
+}
+.web-account-nav button.active { background: rgba(30,170,249,.12); color: var(--aurora-blue); }
+
+/* ---------- Main ---------- */
+.web-account-main { display: flex; flex-direction: column; gap: 2rem; }
+.web-account-section header { margin-bottom: 1rem; }
+.web-account-section h2 { margin: 0; font-size: 1.6rem; color: var(--text, #0f172a); }
+.web-account-section p { margin-top: .4rem; color: var(--muted, #475569); }
+
+/* ---------- Cards (light) ---------- */
+.section-card,
+.web-account-card,
+.subscription-card {
+  background: #ffffff;                              /* light: true white */
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 22px;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  box-shadow: 0 25px 60px rgba(15,23,42,.08);
+  width: 100%; box-sizing: border-box;
+}
+
+/* ---------- Forms ---------- */
+.web-account-form { display: flex; flex-direction: column; gap: .85rem; }
+.web-account-form label { font-weight: 600; font-size: .95rem; }
+.web-account-form input,
+.web-account-form textarea {
+  border-radius: 12px; border: 1px solid rgba(148,163,184,.4);
+  padding: .65rem .75rem; font-size: .95rem; background: #ffffff; color: inherit;
+}
+
+/* ---------- Admin Controls ---------- */
+.web-account-admin {
+  margin-top: clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.web-account-admin header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.web-account-admin h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text, #0f172a);
+}
+.web-account-admin p {
+  color: var(--muted, #475569);
+  margin: .25rem 0 0;
+}
+.web-account-admin .admin-lookup-inline {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.web-account-admin .admin-lookup-inline label {
+  font-weight: 600;
+}
+.web-account-admin .admin-lookup-inputs {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+.web-account-admin input,
+.web-account-admin textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,.35);
+  padding: .6rem .75rem;
+  font-size: .95rem;
+  background: #ffffff;
+  color: inherit;
+}
+.web-account-admin textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+.web-account-admin .admin-selected-chip {
+  font-size: .9rem;
+  font-weight: 600;
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  background: rgba(148,163,184,.15);
+  color: var(--text, #0f172a);
+}
+.web-account-admin .admin-pane-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+.web-account-admin .admin-pane-nav button {
+  border: 1px solid rgba(15,23,42,.15);
+  border-radius: 10px;
+  padding: .45rem .9rem;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+}
+.web-account-admin .admin-pane-nav button.active {
+  background: rgba(30,170,249,.15);
+  border-color: rgba(30,170,249,.35);
+  color: var(--aurora-blue);
+}
+.web-account-admin .admin-pane-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.web-account-admin .admin-card {
+  background: #fff;
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 18px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 12px 30px rgba(15,23,42,.05);
+}
+.web-account-admin .admin-card.compact label {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: .75rem;
+}
+.web-account-admin .admin-card h3 {
+  margin: 0 0 .35rem;
+  font-size: 1.1rem;
+}
+.web-account-admin .admin-card p {
+  margin-top: 0;
+}
+.web-account-admin .admin-template-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+.web-account-admin .admin-template-list li button {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: transparent;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.web-account-admin .admin-template-list li.active button,
+.web-account-admin .admin-template-list li button:hover {
+  background: rgba(30, 170, 249, 0.15);
+}
+.web-account-admin .admin-template-preview {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(148, 163, 184, 0.08);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+.web-account-admin .admin-hint {
+  margin-top: 0.5rem;
+  color: var(--muted, #475569);
+  font-size: 0.9rem;
+}
+.web-account-admin .admin-card.admin-placeholder {
+  text-align: center;
+  font-weight: 600;
+  color: var(--muted, #475569);
+}
+.web-account-admin .admin-target-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.25rem;
+}
+.web-account-admin .admin-target-grid dt {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted, #475569);
+  margin: 0;
+}
+.web-account-admin .admin-target-grid dd {
+  margin: .15rem 0 0;
+  font-weight: 700;
+}
+.web-account-admin .admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.web-account-admin .admin-form-grid.compact {
+  margin-bottom: 0;
+}
+.web-account-admin .admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.web-account-admin .admin-actions.compact button {
+  min-width: 130px;
+}
+.web-account-admin .admin-actions.wrap {
+  flex-wrap: wrap;
+}
+.admin-pane-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 1rem;
+}
+.web-account-input--readonly {
+  background: rgba(148,163,184,.12);
+  color: var(--muted, #475569);
+  pointer-events: none;
+}
+
+body.dark .web-account-admin h2 {
+  color: #f8fafc;
+}
+body.dark .web-account-admin p,
+body.dark .web-account-admin label {
+  color: rgba(226,232,240,.85);
+}
+body.dark .web-account-admin input,
+body.dark .web-account-admin textarea {
+  background: rgba(15,23,42,.5);
+  border-color: rgba(226,232,240,.2);
+  color: #f8fafc;
+}
+body.dark .web-account-admin .admin-template-list li button {
+  border-color: rgba(226,232,240,.2);
+  color: #f8fafc;
+}
+body.dark .web-account-admin .admin-template-list li button:hover,
+body.dark .web-account-admin .admin-template-list li.active button {
+  background: rgba(30,170,249,.2);
+}
+body.dark .web-account-admin .admin-template-preview {
+  background: rgba(15,23,42,.55);
+  border-color: rgba(226,232,240,.18);
+  color: #f8fafc;
+}
+body.dark .mail-template-toolbar select,
+body.dark .mail-template-toolbar button,
+body.dark .mail-template-dropdown select {
+  background: rgba(15,23,42,.5);
+  border-color: rgba(226,232,240,.2);
+  color: #f8fafc;
+}
+body.dark .web-account-admin .admin-selected-chip {
+  background: rgba(15,23,42,.65);
+  color: #e2e8f0;
+}
+body.dark .web-account-admin .admin-pane-nav button {
+  border-color: rgba(226,232,240,.2);
+  color: rgba(226,232,240,.85);
+}
+body.dark .web-account-admin .admin-pane-nav button.active {
+  background: rgba(59,130,246,.25);
+  border-color: rgba(59,130,246,.35);
+  color: #bfdbfe;
+}
+body.dark .web-account-admin .admin-card {
+  background: rgba(15,23,42,.85);
+  border-color: rgba(226,232,240,.08);
+  box-shadow: 0 10px 25px rgba(2,6,23,.8);
+}
+
+/* ---------- Buttons ---------- */
+.web-account-primary,
+.web-account-secondary,
+.web-account-danger,
+.web-account-verified-request,
+.web-account-plus-button { border-radius: 12px; font-weight: 700; }
+.web-account-primary {
+  border: 0; padding: .6rem 1.2rem; color: #fff;
+  background: linear-gradient(120deg, var(--aurora-green), var(--aurora-blue));
+}
+.web-account-secondary {
+  border: 1px solid rgba(15,23,42,.2); background: transparent;
+  padding: .55rem 1rem; color: inherit; font-weight: 600;
+}
+.web-account-danger {
+  border: 0; padding: .55rem 1rem; background: #ef4444; color: #fff; font-weight: 600;
+}
+.web-account-verified-request {
+  background: none; border: 0; text-decoration: underline; cursor: pointer; color: inherit; font-weight: 600;
+}
+.web-account-plus-button {
+  display: inline-flex; justify-content: center; width: 100%;
+  padding: .55rem 1rem; background: var(--aurora-blue); color: #fff;
+}
+
+/* ---------- Subscription bits ---------- */
+.subscription-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; }
+.subscription-card ul { list-style: none; margin: .75rem 0 1rem; padding: 0; color: var(--muted, #475569); }
+.subscription-card li { margin-bottom: .4rem; }
+.subscription-pill {
+  display: inline-flex; padding: .25rem .9rem; border-radius: 999px; font-size: .78rem;
+  background: rgba(30,170,249,.15); color: var(--aurora-blue);
+}
+.subscription-card.is-active { border-color: var(--aurora-blue); box-shadow: 0 15px 35px rgba(30,170,249,.2); }
+
+/* ---------- Security / Sessions ---------- */
+.security-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; }
+.session-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: .75rem; margin: 1rem 0; }
+.session-details dt {
+  font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted, #475569);
+}
+.session-details dd { margin: .2rem 0 0; font-weight: 600; }
+.session-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+.data-card, .app-settings-card { display: flex; flex-direction: column; gap: .75rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .web-account-layout { grid-template-columns: 1fr; }
+  .web-account-nav { position: static; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+  .web-account-nav ul { flex-direction: row; flex-wrap: wrap; gap: .75rem 1.5rem; }
+}
+
+/* ---------- Width constraints for hero/alerts ---------- */
+.web-account-hero, .web-account-alert { max-width: 960px; margin-left: auto; margin-right: auto; }
+
+/* ===========================
+ * Dark mode (scoped)
+ * =========================== */
+body.dark .web-account-nav {
+  background: rgba(15,23,42,.6);
+  border-color: rgba(148,163,184,.2);
+  box-shadow: 0 12px 28px rgba(0,0,0,.4);
+}
+body.dark .section-card,
+body.dark .web-account-card,
+body.dark .subscription-card {
+  background: rgba(15,23,42,.92);
+  border-color: rgba(148,163,184,.2);
+  box-shadow: 0 25px 50px rgba(0,0,0,.55);
+}
+body.dark .web-account-form input,
+body.dark .web-account-form textarea {
+  background: rgba(15,23,42,.8);
+  border-color: rgba(148,163,184,.4);
+  color: #e2e8f0;
+}
+body.dark .web-account-admin input,
+body.dark .web-account-admin textarea {
+  background: rgba(15,23,42,.8);
+  border-color: rgba(148,163,184,.4);
+  color: #e2e8f0;
+}
+body.dark .web-account-input--readonly {
+  background: rgba(15,23,42,.65);
+  color: #cbd5f5;
+}
+body.dark .web-account-alert.error { background: rgba(239,68,68,.12); color: #fecaca; }
+body.dark .web-account-alert.success { background: rgba(34,197,94,.12); color: #bbf7d0; }
+body.dark .web-account-verified-badge.is-verified { background: rgba(34,197,94,.1); color: #10b981; }
+body.dark .web-account-verified-badge.is-unverified { background: rgba(251,191,36,.12); color: #f59e0b; }
+.mail-template-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  align-items: center;
+}
+.mail-template-toolbar select,
+.mail-template-toolbar button {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  cursor: pointer;
+}
+.mail-template-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.mail-template-dropdown .dropdown-wrapper {
+  position: relative;
+}
+.mail-template-dropdown select {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: #fff;
+}

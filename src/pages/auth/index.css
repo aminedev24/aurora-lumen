@@ -1,0 +1,7 @@
+/* ==============================================================================
+ * Auth bundle – shared variables + individual screens
+ * ============================================================================== */
+@import "./shared.css";
+@import "./register.css";
+@import "./login.css";
+@import "./reset.css";

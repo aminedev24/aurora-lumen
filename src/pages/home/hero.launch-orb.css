@@ -1,0 +1,139 @@
+.hero-launch-orb {
+  width: clamp(220px, 20vw, 320px);
+  height: clamp(220px, 20vw, 320px);
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: radial-gradient(circle at 50% 30%, rgba(30, 170, 249, 0.7), rgba(11, 139, 43, 0.35));
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.4);
+  color: #fff;
+  outline: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-launch-orb:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 70px rgba(30, 170, 249, 0.4);
+}
+
+.hero-launch-label {
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.hero-launch-subtext {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.hero-launch-orb::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.hero-launch-orb .energy-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hero-launch-orb .layer-1 {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+}
+
+.hero-launch-orb .layer-2 {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-launch-orb .energy-core {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(30, 170, 249, 0.1));
+  filter: blur(0px);
+  transition: filter 0.8s ease;
+}
+
+.hero-launch-orb.idle .layer-1 {
+  animation: pulseGlow 4s ease-in-out infinite;
+  opacity: 1;
+}
+
+.hero-launch-orb.idle .layer-2 {
+  animation: orbitPulse 5s linear infinite;
+  opacity: 0.8;
+}
+
+.hero-launch-orb.charging {
+  box-shadow: 0 40px 90px rgba(30, 170, 249, 0.55);
+}
+
+.hero-launch-orb.charging .energy-layer {
+  animation: chargeSweep 0.8s ease forwards;
+}
+
+.hero-launch-orb.charging .layer-2 {
+  animation-duration: 1s;
+}
+
+.hero-launch-orb.charging .energy-core {
+  filter: blur(6px) brightness(1.2);
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+@keyframes orbitPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+@keyframes chargeSweep {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}

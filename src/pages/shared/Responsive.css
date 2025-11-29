@@ -1,0 +1,206 @@
+/* ==============================================================================
+ * File: /frontend/src/pages/Responsive.css
+ * Description: Unified responsive rules for homepage + chat + sidebar + mode selector + scrolling
+ * #08882A Aurora Green
+ * #1DA1F2 Aurora Blue
+ * ============================================================================== */
+
+/* Shared viewport helpers */
+:root {
+  --app-height: 100dvh;
+  --mobile-input-offset: calc(140px + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 480px) {
+  :root {
+    --mobile-input-offset: calc(165px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ===== Default: Desktop ===== */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+/* ===== Phones (≤768px) ===== */
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-height: var(--app-height, 100dvh);
+  }
+
+  .landing,
+  .layout,
+  .chat-view-container,
+  .login-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Homepage images except logos */
+  .landing img:not(.logo-img) { width: 100%; height: auto; }
+
+  /* Hero */
+  .landing-hero { padding: 2rem 1rem; text-align: center; }
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 1rem; margin: 0 auto 1rem; }
+
+  /* Hero Cards → single column */
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+  .hero-card {
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1rem;
+  }
+  .hero-card h3 { font-size: 1.1rem; }
+  .hero-card p { font-size: 0.9rem; }
+
+  /* Bottom Feature Cards → single column */
+  .landing-features {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .feature-card { padding: 1rem; }
+  .feature-card h3 { font-size: 1.1rem; }
+  .feature-card p { font-size: 0.9rem; }
+
+  /* Footer (stacked) */
+  .landing-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-center {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-center ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 2rem;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .footer-left { order: 2; display: flex; justify-content: center; width: 100%; }
+  .footer-right { order: 3; display: flex; justify-content: center; width: 100%; }
+  .footer-bottom { order: 4; text-align: center; font-size: 0.8rem; }
+
+  /* Contact */
+  .contact-form { padding: 1rem; }
+  .contact-form input, .contact-form textarea { font-size: 0.9rem; padding: 0.6rem; }
+
+  /* About & Legal */
+  .about-hero h1, .legal-page .about-hero h1 { font-size: 1.6rem; }
+  .about-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem;
+    margin: 2rem auto;
+  }
+  .about-section img { width: 100%; height: auto; order: 1; }
+  .about-section > div { order: 2; }
+  .about-feature h3 { font-size: 1rem; }
+  .about-feature p { font-size: 0.85rem; }
+  .about-quote { font-size: 0.9rem; padding: 1rem; }
+
+  /* Chat App Fixes */
+  .messages-inner { max-width: 100% !important; padding: 0 8px !important; }
+  .message-content { max-width: 95% !important; font-size: 0.9rem; }
+  .layout {
+    height: var(--app-height, 100dvh) !important;
+    max-height: var(--app-height, 100dvh) !important;
+    overflow: hidden !important;
+    display: flex !important;
+  }
+  .messages-container {
+    max-height: calc(var(--app-height, 100dvh) - var(--mobile-input-offset, 140px));
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 12px;
+    padding-bottom: var(--mobile-input-offset, 140px);
+  }
+
+  /* Sidebar hidden on mobile */
+  .sidebar, .sidebar-layout { display: none !important; }
+  .main { width: 100% !important; margin: 0 !important; }
+
+  /* Input toggle */
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+
+  /* Dark mode is handled via global CSS variables; no per-page overrides here. */
+
+  /* Auth layouts */
+  .login-page .login-layout { width: 100%; }
+}
+
+/* ===== Tablets (769px–1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body { overflow-x: hidden; }
+
+  .landing-hero { padding: 3rem 2rem; text-align: center; }
+  .hero-title { font-size: 2.4rem; }
+  .hero-subtitle { font-size: 1.2rem; margin: 0 auto 1.5rem; }
+
+  /* Hero Cards: 2 per row */
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .hero-card { flex: none !important; max-width: 100% !important; width: 100% !important; padding: 1.2rem; }
+  .hero-card h3 { font-size: 1.2rem; }
+  .hero-card p { font-size: 1rem; }
+
+  /* Features: 2 per row */
+  .landing-features { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem; }
+
+  .landing-footer { padding: 2rem 1.5rem; }
+  .footer-center ul { flex-direction: row; gap: 1rem; }
+
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+  }
+  .about-feature h3 { font-size: 1.2rem; }
+  .about-feature p { font-size: 1rem; }
+  .about-quote { font-size: 1rem; padding: 2rem 1rem; }
+
+  /* Dark mode is handled via global CSS variables; no per-page overrides here. */
+}
+
+/* Login/Register base styles defined in pages/auth modules */
+/* Keep only scaling tweaks for smaller screens (definitions live in Home imports) */
+@media (max-width: 480px) {
+  .login-typing-text { font-size: 1.3rem !important; height: 2.5rem !important; min-height: 2.5rem !important; }
+}
+@media (max-width: 360px) {
+  .login-typing-text { font-size: 1.1rem !important; height: 2.2rem !important; min-height: 2.2rem !important; }
+}

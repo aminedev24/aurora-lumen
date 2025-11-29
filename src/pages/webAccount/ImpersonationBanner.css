@@ -1,0 +1,71 @@
+.impersonation-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.impersonation-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.impersonation-icon {
+  font-size: 20px;
+}
+
+.impersonation-text {
+  flex: 1;
+  font-size: 14px;
+  text-align: center;
+}
+
+.impersonation-text strong {
+  font-weight: 600;
+}
+
+.impersonation-exit-btn {
+  background: white;
+  color: #ff6b6b;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.impersonation-exit-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.impersonation-exit-btn:active {
+  transform: translateY(0);
+}
+
+/* Push content down when banner is visible */
+body:has(.impersonation-banner) {
+  padding-top: 56px;
+}

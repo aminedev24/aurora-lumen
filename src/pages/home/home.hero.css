@@ -1,0 +1,324 @@
+/* ==============================================================================
+ * frontend/src/pages/home.hero.css
+ * Aurora Lumen Hero + CTA — corrected syntax (all blocks closed)
+ * ============================================================================== */
+
+.hp-hero {
+  position: relative;
+  width: 100%;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(11,139,43,0.32), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(30,170,249,0.3), transparent 65%),
+    linear-gradient(180deg, #E8FBF0 0%, #F0F8FF 100%);
+  padding: clamp(1.2rem, 3vw, 2.6rem) 0 clamp(2rem, 4vw, 3.5rem);
+  min-height: clamp(420px, 44vw, 560px);
+}
+
+body.dark .hp-hero {
+  background:
+    radial-gradient(circle at 60% 40%, rgba(11,139,43,0.25), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(30,170,249,0.25), transparent 70%),
+    linear-gradient(180deg, #0D1116 0%, #18222F 100%);
+}
+
+.hp-hero-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, 480px) minmax(220px, 1fr);
+  gap: clamp(1rem, 3vw, 4rem);
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.hp-hero-copy {
+  position: relative;
+  z-index: 8;
+  max-width: min(520px, 40vw);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hp-hero-copy .hp-eyebrow {
+  color: #0B8B2B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .75rem;
+}
+
+body.dark .hp-hero-copy .hp-eyebrow {
+  color: #38bdf8;
+}
+
+.hp-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #0B8B2B;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.4);
+  line-height: 1.08;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hp-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1e293b;
+  margin-bottom: .75rem;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.3);
+  max-width: min(32rem, 100%);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+body.dark .hp-title {
+  color: #1EAAF9;
+  text-shadow: none;
+}
+
+body.dark .hp-subtitle {
+  color: #cbd5e1;
+  text-shadow: none;
+}
+
+/* CTA row and buttons */
+.hp-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: .75rem;
+  position: relative;
+  z-index: 8;
+}
+
+.hp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 12px;
+  padding: .8rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .25s ease;
+  text-decoration: none;
+  flex: 0 0 auto;
+  width: auto;
+  text-wrap: balance;
+}
+
+.hp-btn--stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  width: auto;
+}
+
+.hp-btn--stacked .hp-btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.hp-btn--stacked .hp-btn-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  line-height: 1.2;
+  width: 100%;
+}
+
+body.dark .hp-btn--stacked .hp-btn-label {
+  color: #e2e8f0;
+  opacity: 0.92;
+}
+
+.hp-cta-row .hp-btn {
+  justify-content: center;
+  white-space: normal;
+}
+
+@media (min-width: 641px) {
+  .hp-btn {
+    max-inline-size: min(22ch, 280px);
+  }
+
+  .hp-btn--stacked {
+    max-inline-size: min(20ch, 260px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hp-hero-shell {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 4vw, 2.25rem);
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp-hero {
+    padding: clamp(1.25rem, 5vw, 2rem) 0 clamp(2.5rem, 10vw, 3.25rem);
+  }
+
+  .hp-hero-shell {
+    gap: clamp(1rem, 4vw, 1.6rem);
+  }
+
+  .hp-hero-copy {
+    max-width: 100%;
+  }
+
+  .hp-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .hp-cta-row .hp-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    width: 100%;
+    white-space: normal;
+  }
+
+  .hp-btn--stacked {
+    width: 100%;
+    max-width: 100%;
+    align-items: stretch;
+  }
+}
+
+/* Ideal mobile viewport: 513x721 */
+@media (max-width: 520px) {
+  .hp-hero {
+    min-height: 0;
+    padding: 1rem 0 1.5rem;
+  }
+
+  .hp-hero-shell {
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .hp-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hp-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hp-cta-row {
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hp-guarantee {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hp-invest-link {
+    margin-top: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hp-hero-orb {
+    margin-top: 0.5rem;
+  }
+}
+
+/* iPhone Plus (414px) and smaller */
+@media (max-width: 414px) {
+  .hp-hero {
+    padding: 0.5rem 0 1rem;
+    min-height: 0;
+  }
+
+  .hp-hero-shell {
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+  }
+
+  .hp-hero-copy {
+    max-width: 100%;
+  }
+
+  .hp-title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .hp-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .hp-cta-row {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hp-cta-row .hp-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hp-btn--stacked .hp-btn-main {
+    font-size: 0.9rem;
+  }
+
+  .hp-btn--stacked .hp-btn-label {
+    font-size: 0.65rem;
+  }
+
+  .hp-guarantee {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .hp-invest-link {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hp-cta-row .hp-btn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.92rem;
+    max-width: 100%;
+  }
+}
+
+.hp-hero-media {
+  flex: 1 1 420px;
+  max-width: 520px;
+}
+
+.hp-mock {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  padding: .75rem;
+}
+
+body.dark .hp-mock {
+  background: rgba(18,24,32,.85);
+  border-color: rgba(255,255,255,.1);
+}

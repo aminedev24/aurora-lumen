@@ -1,0 +1,193 @@
+/* ==============================================================================
+ * Reset Password Styles
+ * ============================================================================== */
+
+.reset-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top right, rgba(29, 161, 242, 0.18), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(13, 212, 105, 0.12), transparent 60%),
+    var(--surface, #f5f7fb);
+}
+
+.dark .reset-page {
+  background: radial-gradient(circle at top right, rgba(29, 161, 242, 0.32), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(13, 212, 105, 0.22), transparent 60%),
+    #04070c;
+}
+
+.reset-layout {
+  flex: 1;
+  width: min(100%, var(--auth-shell-max));
+  margin: 0 auto;
+  padding: var(--auth-side-pad);
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+
+.reset-card {
+  position: relative;
+  width: min(100%, 480px);
+  background: rgba(5, 7, 11, 0.94);
+  color: #e5e7eb;
+  border-radius: 28px;
+  padding: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 34px 68px rgba(5, 7, 11, 0.42);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.4rem, 3vw, 1.85rem);
+  overflow: hidden;
+  border: 1px solid rgba(68, 84, 120, 0.35);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+.reset-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 22% 18%, rgba(29, 161, 242, 0.28), transparent 52%),
+    radial-gradient(circle at 78% 80%, rgba(13, 212, 105, 0.24), transparent 55%);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.dark .reset-card {
+  background: rgba(4, 6, 12, 0.92);
+  border-color: rgba(68, 84, 120, 0.45);
+}
+
+.dark .reset-card::before {
+  background: radial-gradient(circle at 24% 20%, rgba(29, 161, 242, 0.35), transparent 54%),
+    radial-gradient(circle at 76% 78%, rgba(13, 212, 105, 0.28), transparent 56%);
+}
+
+.reset-card h1,
+.reset-copy,
+.reset-form {
+  position: relative;
+  z-index: 1;
+}
+
+.reset-card h1 {
+  font-size: clamp(2.1rem, 4vw, 2.6rem);
+  margin: 0;
+}
+
+.reset-copy {
+  margin: 0;
+  font-size: 1.02rem;
+  color: rgba(229, 231, 235, 0.78);
+}
+
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reset-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reset-field span {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(229, 231, 235, 0.82);
+}
+
+.reset-input {
+  background: rgba(8, 12, 20, 0.55);
+  border: 1px solid rgba(74, 86, 118, 0.55);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #f3f5fa;
+  font-size: 1.02rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reset-input:focus {
+  outline: none;
+  border-color: rgba(29, 161, 242, 0.85);
+  box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.22);
+}
+
+.reset-success {
+  color: #0fd26f;
+  background: rgba(13, 212, 105, 0.12);
+  border: 1px solid rgba(13, 212, 105, 0.35);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reset-error {
+  color: #ffb4b4;
+  background: rgba(255, 99, 99, 0.12);
+  border: 1px solid rgba(255, 99, 99, 0.3);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reset-submit {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1da1f2, #0dd469);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reset-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(29, 161, 242, 0.25);
+}
+
+.reset-submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.dark .reset-submit {
+  background: linear-gradient(135deg, #1da1f2, #0b8bdc);
+}
+
+.reset-secondary {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(229, 231, 235, 0.24);
+  background: transparent;
+  color: rgba(229, 231, 235, 0.85);
+  font-weight: 600;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.reset-secondary:hover {
+  border-color: rgba(29, 161, 242, 0.45);
+  color: #f8fbff;
+  background: rgba(29, 161, 242, 0.12);
+  transform: translateY(-1px);
+}
+
+.dark .reset-secondary {
+  border-color: rgba(229, 231, 235, 0.32);
+  color: rgba(248, 251, 255, 0.85);
+}
+
+.dark .reset-secondary:hover {
+  background: rgba(29, 161, 242, 0.2);
+}
+

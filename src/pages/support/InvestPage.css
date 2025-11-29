@@ -1,0 +1,83 @@
+/* ==============================================================================
+ * File: /frontend/src/pages/support/SupportPage.css
+ * Aurora Lumen — Donation Landing Page
+ * Matches Contact/About/Legal gradient & proportions. No card layout.
+ * ============================================================================== */
+
+/* ---------- HERO ---------- */
+.support-hero {
+  padding: clamp(3rem, 7vw, 5rem) 1rem;
+}
+
+/* ---------- BODY ---------- */
+.support-body {
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+}
+
+.support-body h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--aurora-green);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+body.dark .support-body h2 {
+  color: var(--aurora-blue);
+}
+
+.support-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 640px;
+  text-align: left;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.support-note {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+.support-note a {
+  color: var(--aurora-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.support-note a:hover {
+  text-decoration: underline;
+}
+
+.support-aftertext {
+  max-width: 640px;
+  margin: 2rem auto 1.5rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.support-aftertext a {
+  color: var(--aurora-blue);
+  font-weight: 600;
+}
+
+/* ---------- FOOTNOTE ---------- */
+.support-footnote {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .support-list {
+    text-align: center;
+  }
+}

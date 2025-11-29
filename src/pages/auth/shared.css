@@ -1,0 +1,21 @@
+/* Shared auth surface variables */
+.login-page,
+.register-details-page,
+.reset-page {
+  --auth-shell-max: min(1200px, 100%);
+  --auth-side-pad: clamp(1.5rem, 4vw, 4rem);
+  --auth-block-radius: 0;
+  --auth-panel-shadow: 0 32px 68px rgba(5, 7, 11, 0.42);
+}
+/* Shared footer alignment */
+.login-page .landing-footer .page-shell,
+.register-details-page .landing-footer .page-shell,
+.reset-page .landing-footer .page-shell {
+  width: min(100%, var(--auth-shell-max));
+  max-width: var(--auth-shell-max);
+  margin: 0 auto;
+  padding: 0 var(--auth-side-pad);
+  box-sizing: border-box;
+}
+
+

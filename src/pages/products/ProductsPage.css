@@ -1,0 +1,211 @@
+/* ==============================================================================
+ * Aurora Lumen — Products Page Styles
+ * Matches Contact / Invest / Legal hero dimensions and gradient.
+ * Clean card layout identical to hp-card + support-card shells.
+ * ============================================================================== */
+
+/* ---------- PAGE SCOPE ---------- */
+.products-page {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ---------- HERO (matches contact-hero exactly) ---------- */
+.products-hero {
+  text-align: center;
+  padding: clamp(4rem, 8vw, 6rem) 1rem;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(11, 139, 43, 0.18), transparent 70%),
+    radial-gradient(circle at 30% 80%, rgba(30, 170, 249, 0.18), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+  color: var(--text);
+}
+
+body.dark .products-hero {
+  background:
+    radial-gradient(circle at 60% 40%, rgba(11, 139, 43, 0.22), transparent 70%),
+    radial-gradient(circle at 30% 80%, rgba(30, 170, 249, 0.25), transparent 60%),
+    linear-gradient(180deg, #0e141a 0%, #121a24 100%);
+}
+
+.products-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--aurora-green), var(--aurora-blue));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.75rem;
+}
+
+.products-hero p {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+.products-main {
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+}
+
+/* ---------- CARD SHELL ---------- */
+.products-card-shell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- PRODUCT CARD ---------- */
+.products-card {
+  width: fit-content;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.products-card--primary {
+  width: min(680px, 100%);
+  max-width: 100%;
+}
+
+body.dark .products-card,
+body.dark .products-card--primary {
+  background: rgba(18, 24, 32, 0.92);
+  border-color: rgba(148, 163, 184, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.products-card--primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.products-card--primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 70px rgba(30, 170, 249, 0.25);
+}
+
+.products-card h2,
+.products-card h3 {
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--aurora-blue);
+}
+
+.products-card p {
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0.25rem 0;
+}
+
+.products-subtext {
+  margin-top: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   PRODUCTS GRID — 3 COLUMNS FIRST, RESPONSIVE AFTER
+   ============================================================ */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, max-content));
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.products-grid .products-card {
+  width: fit-content;
+  max-width: 360px;
+  height: auto;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.products-grid .products-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(30,170,249,0.18);
+}
+
+body.dark .products-grid .products-card {
+  background: rgba(18,24,32,0.92);
+  border-color: rgba(148,163,184,0.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(auto, max-content));
+  }
+}
+
+@media (max-width: 680px) {
+  .products-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .products-grid .products-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+}
+
+
+/* ---------- PayPal Slot ---------- */
+.paypal-subscribe-slot {
+  margin-top: 1.75rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 720px) {
+  .products-card {
+    border-radius: 20px;
+    padding: 1.75rem;
+    width: 100%;
+  }
+
+  .products-hero p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-card {
+    padding: 1.5rem;
+  }
+
+  .products-hero {
+    padding: clamp(3rem, 10vw, 5rem) 1rem;
+  }
+}

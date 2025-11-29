@@ -1,0 +1,319 @@
+﻿{
+  "brand": {
+    "name": "Aurora Lumen"
+  },
+  "nav": {
+    "home": "Inicio",
+    "chat": "Chat",
+    "help": "Ayuda",
+    "contact": "Contacto",
+    "toggleLight": "Cambiar a tema claro",
+    "toggleDark": "Cambiar a tema oscuro",
+    "account": "Cuenta"
+  },
+  "hero": {
+    "title": "Aurora Lumen",
+    "subtitle": "Ilumina tu camino hacia el conocimiento"
+  },
+  "cards": {
+    "chat": {
+      "title": "Chatea con Aurora Lumen",
+      "desc": "Empieza una conversación impulsada por Aurora Lumen. Explora conocimiento, haz preguntas y recibe respuestas al instante.",
+      "button": "Entrar al chat"
+    },
+    "learn": {
+      "title": "Descubre más",
+      "desc": "Aurora Lumen es un proyecto experimental que explora IA, memoria y conocimiento. Descubre su propósito y lo que puede hacer.",
+      "button": "Saber más"
+    }
+  },
+  "footer": {
+    "about": "Acerca de",
+    "auroraChat": "Chat de Aurora Lumen",
+    "legalSafety": "Legal y seguridad",
+    "contact": "Contáctanos",
+    "copyright": "© {{year}} Aurora Lumen — Un proyecto de Artisbay Inc."
+  },
+  "general": {
+    "add": "Agregar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "create": "Crear",
+    "owner": "Propietario",
+    "collapse": "Contraer",
+    "expand": "Expandir",
+    "planFree": "Plan gratuito",
+    "auroraName": "Aurora"
+  },
+  "about": {
+    "title": "Acerca de Aurora Lumen",
+    "tagline": "Aurora es la persona con la que hablas, y Lumen —latín para luz— es la visión que la guía.",
+    "section1Title": "Nuestra misión",
+    "section1Text": "Aurora Lumen está creada para iluminar la curiosidad y potenciar el descubrimiento. Al combinar IA avanzada con una memoria en evolución, Aurora Lumen busca generar conversaciones que se sientan vivas, continuas y profundamente significativas.",
+    "section1Extra": "Nos inspira la naturaleza. Así como las auroras calman e inspiran a quienes las observan bajo el cielo nocturno, Aurora Lumen pretende sentirse natural y reconfortante en tu vida diaria. Su presencia debe ser tan orgánica como su nombre sugiere: brillante, fluida y siempre a tu lado para guiarte.",
+    "features": {
+      "memory": {
+        "title": "Memoria viva",
+        "desc": "Aurora Lumen recuerda conversaciones pasadas para crear continuidad, contexto y un entendimiento duradero."
+      },
+      "modes": {
+        "title": "Múltiples modos",
+        "desc": "Aurora se adapta a tus necesidades: Aurora para la interacción natural, Coder para el trabajo técnico, Debate para el razonamiento estructurado y un modo completamente personalizable para tonos propios como familia o amistad."
+      },
+      "knowledge": {
+        "title": "Conocimiento + RAG",
+        "desc": "Sube archivos y Aurora los integrará en sus respuestas con generación aumentada por recuperación."
+      },
+      "workspace": {
+        "title": "Workspace (en construcción)",
+        "desc": "Organiza conversaciones y proyectos en espacios dedicados con memoria y recursos adjuntos."
+      },
+      "language": {
+        "title": "Aurora habla tu idioma",
+        "desc": "Aurora se comunica con naturalidad en inglés, japonés, francés, árabe, español y más — para que se sienta cercana estés donde estés."
+      },
+      "evolution": {
+        "title": "Evolución",
+        "desc": "Aurora Lumen evoluciona constantemente, integrando nuevas ideas, capacidades y mejoras."
+      }
+    },
+    "underConstruction": "(en construcción)",
+    "sections": {
+      "memory": {
+        "p1": "La Memoria Viva de Aurora hace que cada interacción sea personal. Recuerda el contexto entre conversaciones, así que no necesitas repetir lo mismo.",
+        "p2": "No se trata solo de guardar texto; construye un entendimiento que crece contigo a lo largo del tiempo."
+      },
+      "knowledge": {
+        "p1": "Aurora se conecta con grandes bibliotecas de información mediante generación aumentada por recuperación, uniendo memoria y conocimiento del mundo real. Junto con la Memoria Viva, forma un sistema potente que aprende el contexto mientras fundamenta sus respuestas en fuentes fiables."
+      },
+      "modes": {
+        "p1": "Cambia de modo para adaptarlo a tus objetivos — profesional, creativo, cercano o enfocado. Aurora adapta su estilo para darte siempre la voz adecuada en cada momento."
+      },
+      "workspace": {
+        "p1": "Workspace es tu lienzo compartido con Aurora. Aquí, los usuarios colaboran para escribir ensayos, estructurar planes o elaborar guiones cinematográficos — todo en un mismo lugar.",
+        "p2": "Todo queda organizado y listo para cuando regreses. No es solo una ventana de chat, sino un entorno de trabajo donde se encuentran la idea y la acción, ayudándote a pasar de la inspiración a la ejecución con claridad."
+      },
+      "evolution": {
+        "p1": "Aurora está diseñada para crecer. Con cada actualización adquiere nuevos conocimientos, habilidades refinadas y salvaguardas más sólidas. Lo que usas hoy es la base de lo que vendrá mañana.",
+        "p2": "Aurora evoluciona para ayudarte no solo a seguir el ritmo del cambio, sino a prosperar dentro de él."
+      }
+    },
+    "quote": "El futuro pertenece a quienes aprenden, se adaptan y evolucionan."
+  },
+  "legal": {
+    "title": "Legal y seguridad",
+    "disclaimerTitle": "Aviso legal",
+    "disclaimer": "Aurora Lumen es un sistema de inteligencia artificial. Genera respuestas basadas en datos y modelos, no en criterio humano. Aunque está diseñada para ser precisa y útil, las respuestas de Aurora pueden contener errores. Los usuarios son responsables de verificar la información crítica y de todas las acciones que realicen basándose en las respuestas de Aurora.",
+    "privacyTitle": "Privacidad y uso de datos",
+    "privacy": "Las conversaciones pueden almacenarse para proporcionar memoria y continuidad. Estos recuerdos nunca se venden a terceros. Los archivos subidos se procesan solo para responder a tus preguntas y permanecen privados en tu cuenta.",
+    "safetyTitle": "Seguridad y uso responsable",
+    "safety": "No debes depender de Aurora para obtener asesoría médica, legal o financiera. No utilices Aurora para crear o difundir contenido dañino, ilegal o engañoso. Emplea Aurora como una herramienta de apoyo, no como sustituto de la experiencia profesional."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "submit": "Enviar mensaje",
+    "thanks": "Gracias por contactarnos. Te responderemos pronto."
+  },
+  "chat": {
+    "continue": "Continuar"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "signup": "Crear cuenta",
+    "signout": "Cerrar sesión",
+    "haveAccount": "¿Ya tienes una cuenta? Inicia sesión",
+    "usernameOrEmail": "Usuario o correo",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "google": "Iniciar sesión con Google",
+    "processing": "Procesando...",
+    "passwordMismatch": "Las contraseñas no coinciden.",
+    "registerFailed": "Error al registrarse.",
+    "invalid": "Credenciales no válidas.",
+    "requestFailed": "La solicitud falló.",
+    "enterEmailReset": "Introduce tu correo para restablecer la contraseña.",
+    "resetSent": "Si ese correo existe, hemos enviado un enlace de restablecimiento.",
+    "resetFailed": "No se pudo solicitar el restablecimiento.",
+    "samples": [
+      "Redacta una solicitud de empleo",
+      "Ayúdame a elegir el regalo perfecto",
+      "Explica los agujeros negros en palabras sencillas",
+      "Traduce este contrato al árabe",
+      "Sugiere recetas con pollo y arroz",
+      "Crea un plan de estudio para mi examen",
+      "Resume este PDF largo",
+      "Enséñame frases básicas en japonés",
+      "Planifica un viaje de 3 días a París",
+      "Genera ideas para mi startup"
+    ]
+  },
+  "settings": {
+    "title": "Cuenta",
+    "user": "Usuario",
+    "owner": "Propietario",
+    "plan": "Plan",
+    "free": "Gratis",
+    "plus": "Aurora Plus",
+    "language": "Idioma",
+    "langAuto": "Predeterminado del sistema (auto)",
+    "close": "Cerrar",
+    "deleteTitle": "Eliminar cuenta",
+    "deleteNotice": "Al eliminar tu cuenta se cerrará tu sesión de inmediato. Tus chats y proyectos podrían conservarse por un tiempo, pero ya no podrás iniciar sesión.",
+    "deleteAccount": "Eliminar mi cuenta",
+    "deleteWarning": "Esta acción es permanente. Conservaremos tus datos de contacto básicos pero quitaremos tu acceso para iniciar sesión.",
+    "deleteReasonLabel": "¿Por qué te vas? (opcional)",
+    "deleteReasonPlaceholder": "Comparte tus comentarios para ayudarnos a mejorar.",
+    "deleteConfirm": "Sí, eliminar mi cuenta",
+    "deleteCancel": "Cancelar",
+    "deleteProcessing": "Eliminando...",
+    "deleteError": "No se pudo eliminar la cuenta. Inténtalo de nuevo.",
+    "deleteSuccess": "Tu cuenta ha sido eliminada. Tu sesión se cerró.",
+    "dataControl": {
+      "heading": "Control de datos",
+      "badge": "Exportar datos",
+      "helper": "Elige un formato. JSON → estructura real, TXT → formato ligero.",
+      "helperLoggedOut": "Inicia sesión para acceder a las opciones de exportación de datos.",
+      "txtLabel": "Texto sin formato (.txt)",
+      "txtDescription": "Resumen simple y legible para revisar o compartir rápidamente.",
+      "jsonLabel": "JSON (.json)",
+      "jsonDescription": "Exportación estructurada para respaldos o importar en otras herramientas.",
+      "loginRequired": "Debes iniciar sesión para exportar tus datos.",
+      "preparing": "Preparando…",
+      "download": "Descargar",
+      "success": "Tu exportación de datos está lista.",
+      "errorFallback": "No pudimos preparar la exportación. Inténtalo nuevamente.",
+      "signIn": "Los archivos de exportación estarán disponibles cuando inicies sesión.",
+      "includeIdentity": "Incluir identidad del usuario",
+      "includePersona": "Incluir persona de IA",
+      "loadingMeta": "Cargando detalles del perfil…"
+    }
+  },
+  "accountPage": {
+    "sections": {
+      "identity": "Identidad del usuario",
+      "subscription": "Suscripción",
+      "security": "Seguridad",
+      "persona": "Personalización",
+      "data": "Control de datos",
+      "app": "Configuración de la app",
+      "about": "Acerca de y enlaces"
+    },
+    "settingsHint": "Las preferencias de idioma se sincronizan en la aplicación web.",
+    "aboutLinks": {
+      "about": "Acerca de Aurora",
+      "help": "Centro de ayuda",
+      "legal": "Legal y seguridad"
+    }
+  },
+  "security": {
+    "devices": {
+      "title": "Dispositivos y sesiones",
+      "desc": "Consulta y administra los dispositivos con sesión iniciada en Aurora.",
+      "thisDevice": "Este dispositivo",
+      "signOut": "Cerrar sesión",
+      "signOutOthers": "Cerrar sesión en otros dispositivos",
+      "refresh": "Actualizar",
+      "lastActive": "Última actividad {{value}}",
+      "ip": "IP {{ip}}",
+      "empty": "No se encontraron sesiones activas.",
+      "fetchError": "No se pudieron cargar las sesiones.",
+      "revokeError": "No se pudo cerrar sesión en ese dispositivo.",
+      "unknown": "Desconocido"
+    },
+    "mfa": {
+      "title": "Autenticación multifactor",
+      "desc": "Agrega un paso adicional de verificación para mantener segura tu cuenta de Aurora. Próximamente."
+    }
+  },
+  "help": {
+  "title": "Ayuda",
+  "subtitle": "Aprende cómo funciona Aurora y saca el máximo provecho de sus funciones.",
+  "menu": {
+    "overview": "¿Qué es Aurora Lumen?",
+    "memory": "Cómo recuerda Aurora",
+    "modes": "Modos de Aurora",
+    "workspace": "Espacio de trabajo (en construcción)",
+    "themes": "Temas y apariencias",
+    "attachments": "Archivos adjuntos (en construcción)",
+    "disclaimer": "Aviso",
+    "privacy": "Privacidad",
+    "notes": "Notas personales",
+    "internet": "Búsqueda en Internet",
+    "plans": "Planes",
+    "safety": "Seguridad"
+  },
+  "overview": {
+    "title": "¿Qué es Aurora Lumen?",
+    "p1": "Aurora Lumen es una plataforma experimental de IA diseñada para explorar la memoria, la creatividad y el conocimiento.",
+    "p2": "El proyecto cuenta con el apoyo de Artisbay Inc., una empresa de consultoría con sede en Yokohama."
+  },
+  "memory": {
+    "title": "Cómo recuerda Aurora",
+    "p1": "Aurora tiene dos tipos de memoria: de sesión y a largo plazo."
+  },
+  "modes": {
+    "title": "Modos de Aurora",
+    "p1": "Aurora puede adaptar su estilo para ajustarse a tus objetivos."
+  },
+  "workspace": {
+    "title": "Espacio de trabajo (en desarrollo)",
+    "p1": "Tu escritorio de proyectos dentro de Aurora. Organiza notas, borradores, archivos y conversaciones.",
+    "highlight": "El espacio de trabajo convierte los chats aleatorios en trabajo estructurado y continuo."
+  },
+  "themes": {
+    "title": "Temas y apariencias"
+  },
+  "attachments": {
+    "title": "Archivos adjuntos (en desarrollo)",
+    "p1": "Lleva tus archivos a la conversación con Aurora."
+  },
+  "internet": {
+    "title": "Búsqueda en Internet"
+  },
+  "disclaimer": {
+    "title": "Aviso: Aurora puede cometer errores",
+    "p1": "Aurora es inteligente, pero no perfecta. Verifica la información importante."
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "p1": "Artisbay Inc. protege tus datos personales con estrictas medidas de seguridad."
+  },
+  "safety": {
+    "title": "Seguridad"
+  },
+  "notes": {
+    "title": "Notas personales",
+    "p1": "Las notas te permiten guardar recordatorios y preferencias que Aurora recordará entre chats."
+  },
+  "plans": {
+    "title": "Comparar planes de Aurora",
+    "subtitle": "Aurora ofrece tres niveles de cuenta. Puedes cambiar cuando quieras.",
+    "free": {
+      "title": "Gratis (invitado)",
+      "li1": "No se requiere registro: usa Aurora Light al instante.",
+      "li2": "Las subidas y el micrófono están desactivados hasta iniciar sesión.",
+      "li3": "Ideal para preguntas rápidas y contexto ligero."
+    },
+    "standard": {
+      "title": "Estándar",
+      "badge": "Incluye prueba de Aurora Plus de 7 días",
+      "li1": "Acceso a las funciones de memoria avanzada tras la prueba.",
+      "li2": "Uso diario limitado y seguimiento de progreso.",
+      "li3": "Perfecto para estudio o productividad personal."
+    },
+    "plus": {
+      "title": "Plus",
+      "li1": "Nivel completo de rendimiento con contexto continuo y prioridad de cómputo.",
+      "li2": "Espacio de trabajo para creación de contenido colaborando con la IA, herramientas de automatización y exportación completa de datos.",
+      "li3": "Ideal para profesionales, creadores y equipos."
+    }
+  }
+}
+
+}

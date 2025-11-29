@@ -1,0 +1,61 @@
+/* ==============================================================================
+   frontend/src/pages/home.sections.css
+   Aurora Lumen — Home Page Layout (Final Merged)
+   Centers all sections, aligns hero + logos, contact, and footer.
+   Full dark/light mode, responsive. Palette: #0B8B2B / #1EAAF9
+   ============================================================================== */
+
+
+@import "./home.hero.css";
+@import "./home.content.css";
+
+/* ---------- GLOBAL ---------- */
+.landing,
+.support-page {
+  font-family: "Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color: #0F172A;
+  background: linear-gradient(180deg,#F8FBFD 0%,#E9F9FF 100%);
+  overflow-x: hidden;
+}
+body.dark .landing,
+body.dark .support-page {
+  background: linear-gradient(180deg,#0D1116 0%,#18222F 100%);
+  color: #E5E7EB;
+}
+
+/* ---------- CONTAINER ---------- */
+.page-shell,
+.hp-shell {
+  width: 100%;
+  max-width: min(960px, 92vw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Mobile: Ensure content fits within viewport */
+@media (max-width: 640px) {
+  .page-shell,
+  .hp-shell {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* iPhone Plus and smaller: Tighter constraints */
+@media (max-width: 414px) {
+  .page-shell,
+  .hp-shell {
+    padding: 0 0.75rem;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .landing,
+  .support-page {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
